@@ -1,0 +1,26 @@
+[
+  {
+    "id": "soins",
+    "title": "Soins Essentiels",
+    "image": "./assets/projects/soins-home.png",
+    "secondary": "./assets/projects/soins-service.png",
+    "url": "https://soinsessentiels.fr"
+  },
+  {
+    "id": "sunday",
+    "title": "Sunday",
+    "image": "./assets/projects/sunday-player.png",
+    "secondary": "./assets/projects/sunday-compare.png"
+  },
+  {
+    "id": "chess",
+    "title": "Chess Manager",
+    "image": "./assets/projects/chess-cover.png",
+    "terminal": "=== Rapport : joueurs de 'Portfolio demo' ===\n\nPlayer 01 Demo - DM00001 - 0.5 pts\nPlayer 02 Demo - DM00002 - 0.0 pts\nPlayer 03 Demo - DM00003 - 0.5 pts\nPlayer 04 Demo - DM00004 - 0.5 pts\nPlayer 05 Demo - DM00005 - 0.0 pts\nPlayer 06 Demo - DM00006 - 0.5 pts\nPlayer 07 Demo - DM00007 - 1.0 pts\nPlayer 08 Demo - DM00008 - 1.0 pts"
+  },
+  {
+    "id": "optimizer",
+    "title": "Portfolio Optimiser",
+    "terminal": "$ python optimized.py data/dataset1.csv\n\n954 actions retenues, 47 lignes écartées.\n\n22 actions selected\nCoût total : 499.96 €\nBénéfice après deux ans : 198.55 €\n\nBudget limit : 500.00 €"
+  }
+]

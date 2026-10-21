@@ -1,0 +1,67 @@
+/* The text remains ordinary HTML above the water; only the decoration is rasterised. */
+.has-liquid {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.has-liquid .liquid-surface {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.has-liquid .liquid-label {
+  position: relative;
+  pointer-events: none;
+}
+.project-cta.has-liquid:hover,
+.project-cta.has-liquid:active {
+  background: #e4e6df;
+  border-color: #cbbd9c;
+}
+.header.on-paper .project-cta.has-liquid:hover,
+.header.on-paper .project-cta.has-liquid:active {
+  background: #252c27;
+  border-color: #687465;
+}
+.contact-orbit.has-liquid {
+  border-radius: 50%;
+}
+.contact-orbit.has-liquid .liquid-surface {
+  clip-path: circle(46%);
+}
+.contact-orbit.has-liquid svg {
+  pointer-events: none;
+}
+
+/* The still treatment also covers touch, reduced motion and unavailable WebGL. */
+.motion-off .project-cta.has-liquid:hover,
+.motion-off .project-cta.has-liquid:focus-visible,
+.project-cta.liquid-fallback:is(:hover, :focus-visible) {
+  background: #c9ba95;
+  border-color: #c9ba95;
+}
+.motion-off .header.on-paper .project-cta.has-liquid:is(:hover, :focus-visible),
+.header.on-paper .project-cta.liquid-fallback:is(:hover, :focus-visible) {
+  background: #3c4a40;
+}
+.motion-off .contact-orbit.has-liquid:is(:hover, :focus-visible),
+.contact-orbit.liquid-fallback:is(:hover, :focus-visible) {
+  background: #26392f;
+}
+@media (hover: none) {
+  .project-cta.has-liquid:active {
+    background: #c9ba95;
+  }
+  .header.on-paper .project-cta.has-liquid:active {
+    background: #3c4a40;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .has-liquid {
+    transition: none;
+  }
+}

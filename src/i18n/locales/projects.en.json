@@ -1,0 +1,115 @@
+{
+  "soins": {
+    "category": "01 / WEB DESIGN & DEVELOPMENT",
+    "description": "A bespoke website that introduces a wellbeing practice and makes the next step clear.",
+    "intention": "An introduction before the first appointment.",
+    "discipline": "Design / Development / Maintenance",
+    "context": "Client project · Delivered · Ongoing support",
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "detail": "I designed and built the Soins Essentiels website to introduce the practitioner, explain her services and make contact information easy to find. An earthy palette, floral details and carefully arranged images create a warm visual identity across desktop and mobile. I continue to maintain and update the site after delivery.",
+    "features": [
+      [
+        "A recognisable identity",
+        "The homepage, practitioner profile, services, pricing and contact pages share a visual language that keeps the journey consistent."
+      ],
+      [
+        "Information within reach",
+        "Each service has its own page. Clear navigation, images suited to each screen and a compact mobile menu help visitors explore."
+      ],
+      [
+        "Care beyond launch",
+        "I maintain and update the delivered website. The build also includes page metadata, structured data and consent-controlled analytics."
+      ]
+    ],
+    "imageAlt": "Actual homepage of Soins Essentiels, with its beige palette, floral details and image collage.",
+    "caption": "Client website homepage — bespoke design and development.",
+    "secondaryAlt": "Actual sound massage service page of Soins Essentiels.",
+    "secondaryCaption": "A service page — its own content within a shared visual identity.",
+    "note": "Delivered client website for an independent practitioner near Tours, France. I provide ongoing maintenance and updates. Screenshots from the local version of the site.",
+    "linkLabel": "Visit the website"
+  },
+  "sunday": {
+    "category": "02 / INTERFACE & DATA",
+    "description": "Making NFL statistics easier to explore, compare and understand.",
+    "intention": "Give the numbers some context.",
+    "discipline": "Interface design / Application development",
+    "context": "Personal product · In development",
+    "stack": ["Next.js", "React", "TypeScript", "nflverse"],
+    "detail": "With Sunday, I’m designing a way to explore the NFL through its players, teams and statistics. The French-language interface brings together profiles, weekly charts and comparisons, with explanations of individual metrics. This is my own product, currently in development ahead of a planned public launch.",
+    "features": [
+      [
+        "Read beyond the numbers",
+        "Find a player, explore a season and understand the indicators. The statistics shown adapt to the player’s position."
+      ],
+      [
+        "Compare on common ground",
+        "The same position, the same season: the basis of comparison stays clear. Switch between totals and averages per recorded game."
+      ],
+      [
+        "Care for the data behind the interface",
+        "A TypeScript import validates the CSV files. Calculation functions account for missing values and weighted ratios before results reach the screen."
+      ]
+    ],
+    "imageAlt": "Actual Sunday dashboard showing a player profile and season statistics.",
+    "caption": "Player view from the development version — imported 2025 season data.",
+    "secondaryAlt": "Actual Sunday comparison view with two quarterbacks and per-game statistics.",
+    "secondaryCaption": "Player comparison — position, season and aggregation mode remain explicit.",
+    "note": "Personal product in development, not affiliated with the NFL. Statistics: nflverse, CC BY 4.0. Screenshots use the import dated 27 September 2026; the data is not live."
+  },
+  "chess": {
+    "category": "03 / PYTHON APPLICATION",
+    "description": "Keep a chess tournament’s players, rounds and results in one place, even offline.",
+    "intention": "Organise the play. Keep track of the game.",
+    "discipline": "Python development / Application architecture",
+    "context": "OpenClassrooms · Python project 4",
+    "stack": ["Python", "Object-oriented programming", "MVC", "JSON"],
+    "detail": "This Python application manages a tournament from the terminal: player registration, round creation, result entry and standings. An MVC architecture separates tournament rules from the interface, while JSON storage allows a session to be resumed.",
+    "features": [
+      [
+        "Follow the whole tournament",
+        "Register players, create the tournament, generate rounds and record wins or draws."
+      ],
+      [
+        "Keep the rules readable",
+        "Player, match, round and tournament models are independent of the console views. Later pairings take scores into account while trying to avoid rematches."
+      ],
+      [
+        "Find the information again",
+        "JSON files preserve the data. Five reports provide access to players, tournaments and the history of rounds and matches."
+      ]
+    ],
+    "imageAlt": "Sculptural illustration of a marble king, a dark knight and a pawn on a chessboard.",
+    "caption": "Editorial illustration generated for the project. The application runs in the terminal.",
+    "terminalTitle": "A look at the standings",
+    "terminalCaption": "Report produced by the application with eight fictional players for this demonstration.",
+    "note": "Built during the OpenClassrooms Python programme. “Chess Manager” is the presentation name. The demonstration runs the application with fictional players."
+  },
+  "optimizer": {
+    "category": "04 / PYTHON & ALGORITHMS",
+    "description": "Find the best combination within a fixed budget, then verify the result.",
+    "intention": "A fixed budget. A better combination.",
+    "discipline": "Python development / Algorithm optimisation",
+    "context": "OpenClassrooms · Python project 7",
+    "stack": ["Python", "NumPy", "Decimal", "CSV"],
+    "detail": "How do you choose a combination of stocks within €500 when each stock can be bought only once? This project compares exhaustive search with a dynamic programming solution. The work covers the calculation, validation of input data and reconstruction of a result that can be checked.",
+    "features": [
+      [
+        "Compare two approaches",
+        "Exhaustive search provides a reference on the small dataset. Dynamic programming uses NumPy arrays to process the larger files."
+      ],
+      [
+        "Keep amounts precise",
+        "Costs are represented in integer cents and source values are parsed with Decimal. The chosen combination can be reconstructed from the program’s decisions."
+      ],
+      [
+        "Account for the input",
+        "Invalid rows, conflicting names and duplicates are handled explicitly. On dataset1.csv, 954 items are accepted and 47 rows are excluded."
+      ]
+    ],
+    "imageAlt": "Graphic of the best theoretical gain for increasing budgets, calculated from the project’s first dataset.",
+    "caption": "Budget and theoretical gain — 26 points calculated by the program on dataset1.csv.",
+    "terminalTitle": "A result you can check.",
+    "terminalCaption": "Execution excerpt verified on 21 October 2026. Both algorithms return the same gain on the small dataset.",
+    "note": "Algorithm exercise using supplied, fixed-return datasets. These are theoretical outputs for the exercise, not realised investment returns or a trading product."
+  }
+}

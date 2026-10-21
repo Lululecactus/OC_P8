@@ -1,0 +1,22 @@
+{
+  "name": "presence-portfolio",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4176 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4176 --strictPort"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "vite": "8.3.4"
+  },
+  "description": "Independent creative developer portfolio — French and English",
+  "engines": {
+    "node": ">=22.12.0 <27",
+    "npm": ">=10"
+  }
+}
