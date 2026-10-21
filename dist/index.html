@@ -1,0 +1,699 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="#090a0c" name="theme-color" />
+    <meta content="noindex,nofollow" name="robots" />
+    <title data-i18n="meta.title">
+      Nicolas Kulpa-Hurault — Web design &amp; creative development
+    </title>
+    <meta
+      content="Nicolas Kulpa-Hurault, freelance web designer and developer. Bespoke websites, memorable interactions and ongoing support. Let’s talk about your project."
+      data-i18n-content="meta.description"
+      name="description"
+    />
+    <link
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%239cabc3' d='M5 5h4v22H5zm9 0h4v22h-4zm9 0h4v22h-4z'/%3E%3C/svg%3E"
+      rel="icon"
+    />
+    <link
+      as="font"
+      crossorigin=""
+      href="./assets/manrope-regular.ttf"
+      rel="preload"
+      type="font/ttf"
+    />
+    <script type="module" crossorigin src="/OC_P8/assets/index-C3uDWe-6.js"></script>
+    <link rel="stylesheet" crossorigin href="/OC_P8/assets/index-DrvbKuVj.css">
+  </head>
+  <body>
+    <a class="skip" data-i18n="nav.skip" href="#work">Skip to the gallery</a>
+    <header class="header">
+      <a
+        aria-label="Back to the introduction"
+        class="identity"
+        data-i18n-aria-label="nav.home"
+        href="#top"
+        ><span aria-hidden="true" class="identity-mark">Ⅲ</span
+        ><span data-i18n-html="nav.identity"
+          >NICOLAS KULPA-HURAULT<br />DESIGN &amp; DEVELOPMENT</span
+        ></a
+      >
+      <nav aria-label="Main navigation" data-i18n-aria-label="nav.label">
+        <a href="#work"><span data-i18n="nav.work">Work</span><sup id="work-count">04</sup></a
+        ><button data-i18n="nav.about" id="about-open" type="button">About</button
+        ><button class="project-cta" id="contact-open" type="button">
+          <span data-i18n="nav.cta">Start a project</span>
+        </button>
+        <div
+          aria-label="Language"
+          class="language-switch"
+          data-i18n-aria-label="language.label"
+          role="group"
+        >
+          <button
+            aria-label="Afficher en français"
+            aria-pressed="false"
+            data-language="fr"
+            lang="fr"
+            type="button"
+          >
+            FR</button
+          ><span aria-hidden="true">/</span
+          ><button
+            aria-label="Display in English"
+            aria-pressed="true"
+            data-language="en"
+            lang="en"
+            type="button"
+          >
+            EN
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main id="top">
+      <section
+        aria-label="Interactive portfolio exploration"
+        class="experience"
+        data-i18n-aria-label="hero.label"
+      >
+        <div class="stage">
+          <canvas
+            aria-label="Interactive sculpture. Drag to turn the sculpture, or use the controls below."
+            id="scene"
+            tabindex="0"
+          ></canvas>
+          <div aria-hidden="true" class="scene-fallback">
+            <div></div>
+            <span data-i18n="hero.fallback">FORM / LIGHT / MOTION</span>
+          </div>
+          <div class="intro">
+            <p class="eyebrow" data-i18n="hero.eyebrow">FREELANCE WEB DESIGNER &amp; DEVELOPER</p>
+            <h1 data-i18n-html="hero.title">
+              Character.<br />Movement.<br /><span>A lasting impression.</span>
+            </h1>
+            <p class="intro-description" data-i18n-html="hero.description">
+              I design and build your website,<br />from the first sketch to launch.
+            </p>
+            <button class="project-cta intro-cta" data-open-contact="" type="button">
+              <span data-i18n="hero.cta">Let’s discuss your project</span>
+            </button>
+          </div>
+          <div
+            aria-label="Sculpture controls"
+            class="sculpture-tools"
+            data-i18n-aria-label="sculpture.controls"
+          >
+            <button aria-pressed="false" id="sculpture-mode" type="button">
+              <span aria-hidden="true" class="split-icon">Ⅲ</span> Separate the form
+            </button>
+            <div class="rotation-controls">
+              <button
+                aria-label="Turn sculpture left"
+                data-i18n="sculpture.left"
+                data-i18n-aria-label="sculpture.turnLeft"
+                id="turn-left"
+                type="button"
+              >
+                Left</button
+              ><span data-i18n="sculpture.drag">DRAG TO ROTATE</span
+              ><button
+                aria-label="Turn sculpture right"
+                data-i18n="sculpture.right"
+                data-i18n-aria-label="sculpture.turnRight"
+                id="turn-right"
+                type="button"
+              >
+                Right
+              </button>
+            </div>
+          </div>
+          <div class="gallery-ui" hidden="">
+            <div class="gallery-meta">
+              <span data-i18n="gallery.hint">DRAG / SCROLL TO EXPLORE</span
+              ><span id="project-count">01 / 04</span>
+            </div>
+            <div class="project-info">
+              <p id="project-category"></p>
+              <h2 id="project-title"></h2>
+              <button data-i18n="gallery.open" id="project-open" type="button">View project</button>
+            </div>
+            <div
+              aria-label="Gallery navigation"
+              class="gallery-navigation"
+              data-i18n-aria-label="gallery.navigation"
+            >
+              <button
+                aria-label="Previous project"
+                data-i18n="gallery.previous"
+                data-i18n-aria-label="gallery.previousLabel"
+                id="previous"
+                type="button"
+              >
+                Previous</button
+              ><span id="gallery-position">01 — 04</span
+              ><button
+                aria-label="Next project"
+                data-i18n="gallery.next"
+                data-i18n-aria-label="gallery.nextLabel"
+                id="next"
+                type="button"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+          <div class="stage-bottom">
+            <span class="stage-caption">Available for new projects</span
+            ><a class="scroll-cue" href="#work"
+              ><span class="cue-label" data-i18n="gallery.explore">EXPLORE THE WORK</span
+              ><span aria-hidden="true" class="scroll-line"></span></a
+            ><button aria-pressed="false" id="motion-toggle" type="button">
+              Motion on <i aria-hidden="true"></i>
+            </button>
+          </div>
+          <p id="scene-status" role="status">
+            Preparing the space<span aria-hidden="true">…</span>
+          </p>
+        </div>
+        <div aria-hidden="true" class="scroll-marker" id="work"></div>
+      </section>
+      <section aria-labelledby="practice-title" class="practice page-section" id="more">
+        <div class="section-label">
+          <span data-i18n="practice.label">01 / FOR YOUR PROJECT</span
+          ><span data-i18n="practice.aside">FROM THE FIRST SKETCH TO LAUNCH</span>
+        </div>
+        <div class="practice-intro" data-reveal="">
+          <h2 data-i18n-html="practice.title" id="practice-title">
+            Your world.<br /><span>A distinct presence.</span>
+          </h2>
+          <p data-i18n-html="practice.intro">
+            Make what you do clear.<br />Give people a reason to explore.<br />Make it easy to get
+            in touch.
+          </p>
+        </div>
+        <div class="services-layout">
+          <div aria-label="Services" class="services">
+            <article class="service is-active" data-service="0">
+              <h3>
+                <button
+                  aria-controls="service-design-panel"
+                  aria-expanded="true"
+                  id="service-design"
+                  type="button"
+                >
+                  <span class="service-number">01</span
+                  ><span data-i18n="services.design.title">Bespoke websites</span
+                  ><span aria-hidden="true" class="service-symbol"></span>
+                </button>
+              </h3>
+              <div class="service-panel" id="service-design-panel">
+                <div>
+                  <p data-i18n="services.design.description">
+                    I take care of design and development, from your first idea to launch. A website
+                    that reflects your business, tells its story clearly and gives visitors a
+                    natural next step.
+                  </p>
+                  <ul>
+                    <li data-i18n="services.design.tag1">Art direction</li>
+                    <li data-i18n="services.design.tag2">Design &amp; development</li>
+                    <li data-i18n="services.design.tag3">Launch</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article class="service" data-service="1">
+              <h3>
+                <button
+                  aria-controls="service-development-panel"
+                  aria-expanded="false"
+                  id="service-development"
+                  type="button"
+                >
+                  <span class="service-number">02</span
+                  ><span data-i18n="services.development.title">Interactive experiences</span
+                  ><span aria-hidden="true" class="service-symbol"></span>
+                </button>
+              </h3>
+              <div aria-hidden="true" class="service-panel" id="service-development-panel" inert="">
+                <div>
+                  <p data-i18n="services.development.description">
+                    Movement that guides the eye. A detail that responds to a gesture. A transition
+                    worth noticing. I build interactions that give your site character and make the
+                    visit memorable.
+                  </p>
+                  <ul>
+                    <li data-i18n="services.development.tag1">Animation</li>
+                    <li data-i18n="services.development.tag2">Interaction</li>
+                    <li data-i18n="services.development.tag3">Web-based 3D</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article class="service" data-service="2">
+              <h3>
+                <button
+                  aria-controls="service-support-panel"
+                  aria-expanded="false"
+                  id="service-support"
+                  type="button"
+                >
+                  <span class="service-number">03</span
+                  ><span data-i18n="services.support.title">Ongoing support</span
+                  ><span aria-hidden="true" class="service-symbol"></span>
+                </button>
+              </h3>
+              <div aria-hidden="true" class="service-panel" id="service-support-panel" inert="">
+                <div>
+                  <p data-i18n="services.support.description">
+                    Your website keeps evolving after launch. I stay involved for maintenance,
+                    updates and new ideas, with a level of support we agree on together.
+                  </p>
+                  <ul>
+                    <li data-i18n="services.support.tag1">Maintenance</li>
+                    <li data-i18n="services.support.tag2">Updates</li>
+                    <li data-i18n="services.support.tag3">New features</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div aria-hidden="true" class="service-visual">
+            <span class="visual-coordinate" data-i18n="services.objects"
+              >OBJECTS OF THE PRACTICE</span
+            >
+            <canvas id="service-form"></canvas>
+            <div class="form-fallback">
+              <span data-i18n="services.fallback1">VISION.</span
+              ><span data-i18n="services.fallback2">CRAFT.</span
+              ><span data-i18n="services.fallback3">STRUCTURE.</span>
+            </div>
+            <div class="visual-caption">
+              <span id="form-caption">01 — THE EYE / VISION</span
+              ><span data-i18n="services.move">MOVE TO EXPLORE</span>
+            </div>
+          </div>
+        </div>
+        <div class="practice-foot">
+          <p data-i18n-html="practice.audience">
+            Your business has its own story.<br />I take the time to understand it.
+          </p>
+          <div class="practice-actions">
+            <button class="project-cta" data-open-contact="" type="button">
+              <span data-i18n="practice.cta">Discuss your project</span></button
+            ><a data-i18n="practice.method" href="#method">How we’ll work together</a>
+          </div>
+        </div>
+      </section>
+      <section aria-labelledby="method-title" class="method page-section" id="method">
+        <div class="section-label">
+          <span data-i18n="method.label">02 / WORKING TOGETHER</span
+          ><span data-i18n="method.aside">A CLEAR DIRECTION, AT EVERY STEP.</span>
+        </div>
+        <h2 data-i18n-html="method.title" data-reveal="" id="method-title">
+          Good work starts<br />with a conversation.
+        </h2>
+        <div class="method-layout">
+          <div aria-hidden="true" class="method-marker">
+            <div class="method-counter">
+              <span id="method-current">01</span><span class="method-total">/ 03</span>
+            </div>
+            <div class="method-track"><span></span></div>
+            <p id="method-word">Understand.</p>
+          </div>
+          <div class="method-steps">
+            <article class="method-step is-current" data-step="0">
+              <span class="step-label" data-i18n="method.step1.label">01 / UNDERSTAND</span>
+              <h3 data-i18n="method.step1.title">Understand your project.</h3>
+              <p data-i18n="method.step1.description">
+                We talk about your business, your ideas and your constraints. That first
+                conversation is free, with no commitment. From there, we agree on the scope, budget
+                and steps ahead.
+              </p>
+              <span class="step-output" data-i18n="method.step1.output"
+                >A clear brief before the work begins.</span
+              >
+            </article>
+            <article class="method-step" data-step="1">
+              <span class="step-label" data-i18n="method.step2.label">02 / SHAPE</span>
+              <h3 data-i18n="method.step2.title">Find the right direction.</h3>
+              <p data-i18n="method.step2.description">
+                I propose a visual direction, then we refine it together. Layouts and early
+                interaction studies let you see where the site is heading before development starts.
+              </p>
+              <span class="step-output" data-i18n="method.step2.output"
+                >Design decisions we make together.</span
+              >
+            </article>
+            <article class="method-step" data-step="2">
+              <span class="step-label" data-i18n="method.step3.label">03 / BUILD</span>
+              <h3 data-i18n="method.step3.title">Bring it to life. Keep it moving.</h3>
+              <p data-i18n="method.step3.description">
+                I build the site, check it across screen sizes and prepare it for launch.
+                Afterwards, I stay available for maintenance, updates and the next things you want
+                to do.
+              </p>
+              <span class="step-output" data-i18n="method.step3.output"
+                >A live website. Continued support.</span
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+      <section aria-labelledby="about-section-title" class="about-section page-section" id="about">
+        <div class="section-label">
+          <span data-i18n="about.label">03 / THE PERSON BEHIND IT</span
+          ><span data-i18n="about.aside">FRANCE · WORKING WORLDWIDE</span>
+        </div>
+        <h2 class="perspective-title" data-i18n-html="about.title" id="about-section-title">
+          From design to code.<br /><span>With you.</span>
+        </h2>
+        <div aria-hidden="true" class="perspective-axis">
+          <span>DESIGN</span><span data-i18n="about.development">DEVELOPMENT</span>
+        </div>
+        <div class="about-content">
+          <div class="about-identity">
+            <p class="about-name" data-i18n="about.name">Nicolas Kulpa-Hurault</p>
+            <p class="about-role" data-i18n-html="about.identity">
+              Freelance web designer &amp; developer.<br />Based in France, working remotely
+              worldwide.
+            </p>
+            <a
+              class="about-code"
+              data-i18n="about.github"
+              href="https://github.com/Lululecactus?tab=repositories"
+              rel="noopener noreferrer"
+              target="_blank"
+              >See my code on GitHub</a
+            >
+          </div>
+          <div class="about-copy">
+            <p data-i18n="about.intro">
+              I’m Nicolas, a freelance web designer and developer. I enjoy getting to know a
+              business, finding what makes it interesting and turning that into a web experience.
+              I’m open to projects in any industry: each one is a chance to discover a different
+              world and give it a fitting expression online.
+            </p>
+            <p data-i18n="about.backend">
+              I care about the whole experience and the details that shape it: a typeface, a rhythm,
+              an interaction. You work directly with me before the build, throughout the process and
+              after launch.
+            </p>
+            <div class="working-notes">
+              <p data-i18n-html="about.note1">
+                <span>01</span> One point of contact, from design to development.
+              </p>
+              <p data-i18n-html="about.note2">
+                <span>02</span> Regular conversations and shared decisions.
+              </p>
+              <p data-i18n-html="about.note3">
+                <span>03</span> Support that continues after launch.
+              </p>
+            </div>
+            <details class="toolbox">
+              <summary data-i18n-html="about.tools">
+                My working tools <span aria-hidden="true">+</span>
+              </summary>
+              <dl>
+                <div>
+                  <dt>Design</dt>
+                  <dd>Figma</dd>
+                </div>
+                <div>
+                  <dt>Frontend</dt>
+                  <dd>HTML · CSS · Sass · JavaScript<br />React · TypeScript</dd>
+                </div>
+                <div>
+                  <dt>Backend</dt>
+                  <dd>Python · Django · Flask</dd>
+                </div>
+              </dl>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section
+        aria-labelledby="contact-title-section"
+        class="contact-section page-section"
+        id="contact"
+      >
+        <div class="section-label">
+          <span data-i18n="contactSection.label">04 / YOUR NEXT STEP</span
+          ><span data-i18n="contactSection.aside">AVAILABLE FOR NEW PROJECTS</span>
+        </div>
+        <div class="contact-main" data-reveal="">
+          <h2 data-i18n-html="contactSection.title" id="contact-title-section">
+            Have something in mind?<br /><span>Let’s talk.</span>
+          </h2>
+          <button
+            aria-label="Discuss your project"
+            class="contact-orbit"
+            data-i18n-aria-label="contactSection.ctaLabel"
+            data-open-contact=""
+            type="button"
+          >
+            <svg aria-hidden="true" viewbox="0 0 180 180">
+              <circle cx="90" cy="90" r="84"></circle></svg
+            ><span data-i18n-html="contactSection.orbit">Let’s<br />talk.</span>
+          </button>
+        </div>
+        <div class="contact-bottom">
+          <p data-i18n-html="contactSection.intro">
+            A clear brief or the start of an idea is enough.<br />Our first conversation is free,
+            with no commitment.
+          </p>
+          <button class="project-cta" data-open-contact="" type="button">
+            <span data-i18n="contactSection.cta">Let’s discuss your project</span>
+          </button>
+        </div>
+        <footer class="site-footer">
+          <span data-i18n="footer.copyright">© 2026 Nicolas Kulpa-Hurault</span>
+          <p data-i18n="footer.identity">WEB DESIGN &amp; CREATIVE DEVELOPMENT</p>
+          <button data-i18n="footer.credits" id="credits-open" type="button">Credits</button
+          ><a data-i18n="footer.top" href="#top">Back to top</a>
+        </footer>
+      </section>
+    </main>
+    <dialog
+      aria-describedby="study-description"
+      aria-labelledby="study-title"
+      class="study-view"
+      id="study-dialog"
+    >
+      <header class="study-top">
+        <button
+          aria-label="Back to the gallery"
+          autofocus=""
+          data-i18n="project.back"
+          data-i18n-aria-label="project.backLabel"
+          data-study-close=""
+          type="button"
+        >
+          Back to work
+        </button>
+        <span id="study-number">SELECTED WORK / 01</span>
+      </header>
+      <div class="study-screen">
+        <div aria-hidden="true" class="study-fallback"></div>
+        <div aria-hidden="true" class="study-shade"></div>
+        <div class="study-heading">
+          <p id="study-category"></p>
+          <div class="study-title-mask"><h2 id="study-title"></h2></div>
+        </div>
+        <div class="study-bottom">
+          <p id="study-description"></p>
+          <button data-i18n="project.explore" id="study-discover" type="button">
+            Explore the project
+          </button>
+        </div>
+      </div>
+      <section aria-labelledby="study-intention" class="study-details">
+        <div class="study-detail-heading">
+          <span aria-hidden="true" id="study-index"></span>
+          <div>
+            <p class="study-kicker" data-i18n="project.label">THE PROJECT</p>
+            <h3 id="study-intention"></h3>
+          </div>
+        </div>
+        <div class="study-detail-copy">
+          <dl>
+            <div>
+              <dt data-i18n="project.meta1">Focus</dt>
+              <dd id="study-discipline"></dd>
+            </div>
+            <div>
+              <dt data-i18n="project.meta2">Context</dt>
+              <dd id="study-context"></dd>
+            </div>
+            <div>
+              <dt data-i18n="project.meta3">Built with</dt>
+              <dd id="study-stack"></dd>
+            </div>
+          </dl>
+          <div>
+            <p id="study-detail-copy"></p>
+            <a hidden="" id="study-project-link" rel="noopener noreferrer" target="_blank"></a>
+          </div>
+        </div>
+        <figure>
+          <div class="study-art" id="study-art"></div>
+          <figcaption id="study-caption"></figcaption>
+        </figure>
+        <section
+          aria-label="What went into the project"
+          class="project-features"
+          data-i18n-aria-label="project.features"
+          id="study-features"
+        ></section>
+        <figure class="project-secondary" hidden="" id="study-secondary">
+          <img alt="" id="study-secondary-image" loading="lazy" />
+          <figcaption id="study-secondary-caption"></figcaption>
+        </figure>
+        <section
+          aria-labelledby="study-evidence-title"
+          class="project-evidence"
+          hidden=""
+          id="study-evidence"
+        >
+          <div class="evidence-intro">
+            <p class="study-kicker" data-i18n="project.evidence">FROM THE RUNNING CODE</p>
+            <h4 id="study-evidence-title"></h4>
+          </div>
+          <pre><code id="study-terminal"></code></pre>
+          <p id="study-terminal-caption"></p>
+        </section>
+        <section aria-labelledby="project-enquiry-title" class="project-enquiry">
+          <div>
+            <h4 data-i18n="project.enquiryTitle" id="project-enquiry-title">
+              What do you have in mind?
+            </h4>
+            <p data-i18n="project.enquiryCopy">
+              A free first conversation to get to know each other and explore your idea. No
+              commitment.
+            </p>
+          </div>
+          <a data-i18n="project.enquiryCta" href="mailto:nicolas.kulpa-hurault@hotmail.com"
+            >Email Nicolas</a
+          >
+        </section>
+        <footer class="study-footer">
+          <p id="study-note"></p>
+          <button data-i18n="project.backFooter" data-study-close="" type="button">
+            Back to selected work
+          </button>
+        </footer>
+      </section>
+    </dialog>
+    <dialog
+      aria-describedby="contact-intro"
+      aria-labelledby="contact-title"
+      class="contact-view"
+      id="contact-dialog"
+    >
+      <div class="contact-surface">
+        <div class="contact-sheet">
+          <header class="contact-top" data-contact-reveal="">
+            <span>Ⅲ <span data-i18n="contact.beginning">LET’S GET TO KNOW EACH OTHER</span></span
+            ><button
+              aria-label="Close contact"
+              autofocus=""
+              data-contact-close=""
+              data-i18n-aria-label="contact.close"
+              data-i18n-html="contact.back"
+              type="button"
+            >
+              Back to the portfolio <span aria-hidden="true">×</span>
+            </button>
+          </header>
+          <div class="contact-editorial">
+            <p class="contact-kicker" data-contact-reveal="" data-i18n="contact.kicker">
+              A FIRST CONVERSATION. NO COMMITMENT.
+            </p>
+            <h2 id="contact-title">
+              <span class="contact-line"><span data-i18n="contact.line1">Let’s bring</span></span
+              ><span class="contact-line"
+                ><span data-i18n-html="contact.line2">your idea <em>to life.</em></span></span
+              >
+            </h2>
+            <p data-contact-reveal="" data-i18n-html="contact.intro" id="contact-intro">
+              Send me a few lines about your business, your idea and any timing you have in mind. We
+              can arrange a free introductory call to talk it through.
+            </p>
+          </div>
+          <div class="contact-mail-row" data-contact-reveal="">
+            <span class="contact-mail-label" data-i18n="contact.write">WRITE TO ME</span
+            ><a
+              aria-label="Email Nicolas Kulpa-Hurault"
+              class="contact-email"
+              data-contact-email=""
+              data-i18n="contact.email"
+              data-i18n-aria-label="contact.emailLabel"
+              href="mailto:nicolas.kulpa-hurault@hotmail.com"
+              >nicolas.kulpa-hurault@hotmail.com</a
+            >
+            <button class="contact-copy" data-copy-email="" data-i18n="contact.copy" type="button">
+              Copy email address
+            </button>
+          </div>
+          <p
+            aria-atomic="true"
+            aria-live="polite"
+            class="contact-copy-status"
+            id="contact-copy-status"
+            role="status"
+          ></p>
+          <footer class="contact-sheet-footer" data-contact-reveal="">
+            <span data-i18n-html="contact.location">BASED IN FRANCE<br />WORKING WORLDWIDE</span
+            ><span data-i18n-html="contact.collaboration"
+              >ENGLISH &amp; FRENCH<br />DIRECT COLLABORATION</span
+            >
+            <p data-i18n-html="contact.availability">
+              Available for new projects.<br />Free introductory call. No commitment.
+            </p>
+          </footer>
+        </div>
+      </div>
+    </dialog>
+    <dialog aria-labelledby="credits-title" id="credits-dialog">
+      <div class="dialog-bar">
+        <span>COLOPHON</span
+        ><button
+          aria-label="Close credits"
+          data-close=""
+          data-i18n="credits.close"
+          data-i18n-aria-label="credits.closeLabel"
+          type="button"
+        >
+          Close ×
+        </button>
+      </div>
+      <h2 data-i18n-html="credits.title" id="credits-title">Built from<br />good material.</h2>
+      <p data-i18n-html="credits.sculpture">
+        Head scan:
+        <a href="https://github.com/keijiro/InfiniteScan" rel="noopener" target="_blank"
+          >Lee Perry-Smith / Infinite-Realities</a
+        >,
+        <a href="https://creativecommons.org/licenses/by/3.0/" rel="noopener" target="_blank"
+          >CC BY 3.0</a
+        >. Geometry cropped, closed and separated into sections; materials, lighting and interaction
+        adapted for this study. This is a sculptural asset, not the developer’s portrait.
+      </p>
+      <p data-i18n="credits.assets">
+        Rendering: Three.js (MIT). Typography: Manrope (SIL OFL). Soins Essentiels and Sunday are
+        shown through screenshots of the projects. The chess cover is a generated editorial
+        illustration. The optimisation graphic shows results from the Python program.
+      </p>
+      <p data-i18n-html="credits.data">
+        Sunday uses
+        <a href="https://github.com/nflverse/nflverse-data" rel="noopener" target="_blank"
+          >nflverse statistics</a
+        >, CC BY 4.0. The project is independent of the NFL. Each case study identifies its context
+        and the origin of its visuals.
+      </p>
+    </dialog>
+    <p aria-atomic="true" aria-live="polite" class="sr-only" id="language-status" role="status"></p>
+  </body>
+</html>
