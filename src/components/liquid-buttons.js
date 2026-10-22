@@ -17,54 +17,57 @@ const fragmentShader = /* glsl */ `
   uniform float uFill;
   uniform float uTilt;
   uniform float uImpulse;
-  uniform float uDark;
 
   float water(vec2 p) {
-    float t = uTime;
-    float h = sin(p.x * 7.2 + p.y * 3.1 - t * 1.4) * .35;
-    h += sin(p.x * -4.8 + p.y * 8.3 + t * 1.1) * .22;
-    h += sin(p.x * 11.0 + p.y * 5.7 - t * .8) * .12;
+    float h = sin(p.x * 4.1 + p.y * 6.2 - uTime * 1.2) * .30;
+    h += sin(p.x * -3.6 + p.y * 7.5 + uTime * .9) * .22;
+    h += sin(p.x * 8.4 + p.y * 4.3 - uTime * .7) * .10;
     vec2 delta = p - vec2(uPointer.x * uSize.x / uSize.y, uPointer.y);
-    float d = length(delta);
-    h += sin(d * 19.0 - t * 4.0) * exp(-d * 1.7) * uImpulse * .5;
+    float distance = length(delta);
+    h += sin(distance * 18.0 - uTime * 4.8)
+      * exp(-distance * 2.2) * uImpulse * .28;
     return h;
   }
 
   void main() {
     vec2 uv = vUv;
     float aspect = uSize.x / uSize.y;
-    float x = uv.x * aspect;
-    float activity = .38 + uImpulse * .65;
-    // Surface tension at the sides, a travelling wave, and the pointer's wake.
-    float wave = (sin(x * 3.8 - uTime * 2.0) * 1.6
-      + sin(x * 6.5 + uTime * 1.5) * .65) * activity;
-    wave += sin((uv.x - uPointer.x) * 17.0 - uTime * 3.4)
-      * exp(-abs(uv.x - uPointer.x) * 3.0) * uImpulse * 2.4;
-    float edge = exp(-uv.x * 45.0) + exp(-(1.0 - uv.x) * 45.0);
-    float surface = uFill * 1.085 - .12
-      + (wave + edge * 1.5) / uSize.y + (uv.x - .5) * uTilt;
+    float amplitude = min(uSize.y * .085, 9.0);
+    float activity = .65 + uImpulse * .5;
+    float swell = sin(uv.x * 7.2 - uTime * 2.2) * .72
+      + sin(uv.x * 12.5 + uTime * 1.6) * .28;
+    float wake = sin((uv.x - uPointer.x) * 13.0 - uTime * 3.8)
+      * exp(-abs(uv.x - uPointer.x) * 4.0) * uImpulse * .8;
+    float meniscus = exp(-uv.x * 38.0) + exp(-(1.0 - uv.x) * 38.0);
+    // Keep a little air above the settled water so its moving surface remains visible.
+    float level = uFill * 1.04 - .16;
+    float surface = level + (swell * activity + wake) * amplitude / uSize.y
+      + (uv.x - .5) * uTilt + meniscus * 1.4 / uSize.y;
+    float rearSurface = level + sin(uv.x * 8.8 + uTime * 1.4) * amplitude * .6 / uSize.y
+      + (uv.x - .5) * uTilt + 2.0 / uSize.y;
     float depth = (surface - uv.y) * uSize.y;
-    float alpha = smoothstep(-.65, .65, depth);
+    float rearDepth = (rearSurface - uv.y) * uSize.y;
+    float front = smoothstep(-.7, .7, depth);
+    float rear = smoothstep(-.8, .8, rearDepth) * .35;
 
-    vec2 p = vec2(x, uv.y);
+    vec2 p = vec2(uv.x * aspect, uv.y);
     float h = water(p);
     vec2 gradient = vec2(water(p + vec2(.025, 0.0)) - h,
                          water(p + vec2(0.0, .025)) - h) / .025;
-    vec3 normal = normalize(vec3(-gradient * .12, 1.0));
-    vec3 light = normalize(vec3(-.5, .6, 1.5));
-    float specular = pow(max(dot(normal, light), 0.0), 36.0);
-    // Refracted light through shallow champagne water, not a solid metallic fill.
-    float caustic = pow(.5 + .5 * sin(p.x * 7.5 + p.y * 9.0 + h * 2.6), 16.0);
-    float reflection = exp(-pow((uv.y - .63 + h * .17) * 8.0, 2.0));
-    vec3 shallow = mix(vec3(.82, .77, .63), vec3(.24, .29, .26), uDark);
-    vec3 deep = mix(vec3(.62, .55, .38), vec3(.12, .17, .15), uDark);
-    vec3 color = mix(shallow, deep, smoothstep(0.0, 1.0, 1.0 - uv.y) * .65);
-    color += (specular * .11 + reflection * .065 + caustic * .065) * (1.0 - uDark * .45);
-    color += h * .035;
-    // A fine bright meniscus, with the shadow just below it.
-    color += exp(-pow((depth - .65) / .8, 2.0)) * .21;
-    color -= exp(-pow((depth - 2.2) / 1.35, 2.0)) * .085;
-    gl_FragColor = vec4(color, alpha);
+    vec3 normal = normalize(vec3(-gradient * .13, 1.0));
+    float specular = pow(max(dot(normal, normalize(vec3(-.4, .7, 1.8))), 0.0), 42.0);
+    float reflection = exp(-pow((uv.y - surface + .18 + h * .12) * 10.0, 2.0));
+    float caustic = pow(.5 + .5 * sin(p.x * 6.0 + p.y * 8.5 + h * 3.0), 20.0);
+    vec3 deep = vec3(.025, .085, .115);
+    vec3 shallow = vec3(.075, .24, .30);
+    vec3 color = mix(shallow, deep, clamp(depth / (uSize.y * .9), 0.0, 1.0));
+    color += vec3(.50, .72, .78) * (specular * .15 + reflection * .08 + caustic * .07);
+    // A translucent second wave and a narrow reflection give the free surface its depth.
+    color += vec3(.55, .76, .81) * exp(-pow((depth - .45) / .75, 2.0)) * .6;
+    color -= exp(-pow((depth - 2.3) / 1.4, 2.0)) * .025;
+    vec3 rearColor = vec3(.19, .37, .43);
+    color = mix(rearColor, color, front);
+    gl_FragColor = vec4(color, front + rear * (1.0 - front));
   }
 `;
 
@@ -102,7 +105,6 @@ export function createLiquidButtons({ reduced = false } = {}) {
           uFill: { value: 0 },
           uTilt: { value: 0 },
           uImpulse: { value: 0 },
-          uDark: { value: 0 },
         },
         vertexShader:
           'varying vec2 vUv; void main(){vUv=uv;gl_Position=vec4(position.xy,0.0,1.0);}',
@@ -161,7 +163,6 @@ export function createLiquidButtons({ reduced = false } = {}) {
     uniforms.uFill.value = state.fill;
     uniforms.uTilt.value = state.tilt;
     uniforms.uImpulse.value = state.impulse;
-    uniforms.uDark.value = state.round || state.button.closest('.on-paper') ? 1 : 0;
     if (renderWidth !== state.canvas.width || renderHeight !== state.canvas.height) {
       renderWidth = state.canvas.width;
       renderHeight = state.canvas.height;
@@ -191,11 +192,12 @@ export function createLiquidButtons({ reduced = false } = {}) {
         continue;
       }
       // Damped filling: continuous through rapid enter/leave changes, with no timeline restart.
-      state.velocity += ((target - state.fill) * 42 - state.velocity * 11) * dt;
+      const stiffness = target ? 28 : 40;
+      state.velocity += ((target - state.fill) * stiffness - state.velocity * 10) * dt;
       state.fill = Math.max(0, Math.min(1.025, state.fill + state.velocity * dt));
-      state.impulse *= Math.exp(-dt * 2.1);
-      const tilt = (state.x - 0.5) * 0.07 + state.velocity * 0.009;
-      state.tilt += (tilt - state.tilt) * (1 - Math.exp(-dt * 4));
+      state.impulse *= Math.exp(-dt * 1.6);
+      const tilt = (state.x - 0.5) * 0.13 + state.velocity * 0.018;
+      state.tilt += (tilt - state.tilt) * (1 - Math.exp(-dt * 3.2));
       draw(state);
       running = true;
     }
@@ -263,7 +265,7 @@ export function createLiquidButtons({ reduced = false } = {}) {
         if (event.pointerType === 'touch') return;
         point(event);
         state.hover = true;
-        state.impulse = 0.6;
+        state.impulse = 1;
         activate(state);
       },
       options,

@@ -1,4 +1,4 @@
-/* The text remains ordinary HTML above the water; only the decoration is rasterised. */
+/* The label stays selectable HTML; difference blending follows the rising waterline. */
 .has-liquid {
   position: relative;
   isolation: isolate;
@@ -8,24 +8,30 @@
 .has-liquid .liquid-surface {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
 }
 .has-liquid .liquid-label {
   position: relative;
+  z-index: 1;
+  color: #fff;
+  mix-blend-mode: difference;
   pointer-events: none;
 }
-.project-cta.has-liquid:hover,
-.project-cta.has-liquid:active {
-  background: #e4e6df;
-  border-color: #cbbd9c;
+.project-cta.has-liquid,
+.project-cta.has-liquid:is(:hover, :active) {
+  background: #e7eced;
+  border-color: #e7eced;
 }
-.header.on-paper .project-cta.has-liquid:hover,
-.header.on-paper .project-cta.has-liquid:active {
-  background: #252c27;
-  border-color: #687465;
+.project-cta.has-liquid.is-wet {
+  border-color: #678d99;
+}
+.header.on-paper .project-cta.has-liquid,
+.header.on-paper .project-cta.has-liquid:is(:hover, :active) {
+  background: #15262d;
+  border-color: #45616b;
 }
 .contact-orbit.has-liquid {
   border-radius: 50%;
@@ -37,27 +43,21 @@
   pointer-events: none;
 }
 
-/* The still treatment also covers touch, reduced motion and unavailable WebGL. */
-.motion-off .project-cta.has-liquid:hover,
-.motion-off .project-cta.has-liquid:focus-visible,
-.project-cta.liquid-fallback:is(:hover, :focus-visible) {
-  background: #c9ba95;
-  border-color: #c9ba95;
-}
+/* A still blue treatment also covers touch, reduced motion and unavailable WebGL. */
+.motion-off .project-cta.has-liquid:is(:hover, :focus-visible),
+.project-cta.liquid-fallback:is(:hover, :focus-visible),
 .motion-off .header.on-paper .project-cta.has-liquid:is(:hover, :focus-visible),
-.header.on-paper .project-cta.liquid-fallback:is(:hover, :focus-visible) {
-  background: #3c4a40;
-}
+.header.on-paper .project-cta.liquid-fallback:is(:hover, :focus-visible),
 .motion-off .contact-orbit.has-liquid:is(:hover, :focus-visible),
 .contact-orbit.liquid-fallback:is(:hover, :focus-visible) {
-  background: #26392f;
+  background: #153b49;
+  border-color: #678d99;
 }
 @media (hover: none) {
-  .project-cta.has-liquid:active {
-    background: #c9ba95;
-  }
+  .project-cta.has-liquid:active,
   .header.on-paper .project-cta.has-liquid:active {
-    background: #3c4a40;
+    background: #153b49;
+    border-color: #678d99;
   }
 }
 @media (prefers-reduced-motion: reduce) {

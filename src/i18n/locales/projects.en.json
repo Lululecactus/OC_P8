@@ -1,115 +1,280 @@
 {
   "soins": {
     "category": "01 / WEB DESIGN & DEVELOPMENT",
-    "description": "A bespoke website that introduces a wellbeing practice and makes the next step clear.",
-    "intention": "An introduction before the first appointment.",
-    "discipline": "Design / Development / Maintenance",
+    "description": "Supporting a new wellbeing practice, from its first ideas to a website ready to welcome clients.",
+    "intention": "A new practice. A visual world taking shape.",
+    "discipline": "Project definition / Visual identity / Figma design / Development / Launch / Maintenance",
     "context": "Client project · Delivered · Ongoing support",
     "stack": ["HTML", "CSS", "JavaScript"],
-    "detail": "I designed and built the Soins Essentiels website to introduce the practitioner, explain her services and make contact information easy to find. An earthy palette, floral details and carefully arranged images create a warm visual identity across desktop and mobile. I continue to maintain and update the site after delivery.",
-    "features": [
+    "detail": "Soins Essentiels is the practice of an energy-work practitioner based in La Riche, near Tours, France. She serves local clients interested in her wellbeing services. As she launched her business, she asked me to create her online presence, with no existing visual identity or clear direction for the website.",
+    "imageAlt": "Actual homepage of Soins Essentiels, with its beige palette, floral details and image collage.",
+    "caption": "The homepage brings together the visual identity, the introduction to the practice and routes into its services.",
+    "secondaryAlt": "Actual sound massage service page of Soins Essentiels.",
+    "secondaryCaption": "A dedicated service page lets visitors explore one treatment within the same visual identity.",
+    "note": "Delivered client project with ongoing maintenance. Screenshots of the completed website. Qualitative feedback relayed by the client.",
+    "linkLabel": "Visit the website",
+    "challenge": {
+      "title": "Turn an uncertain starting point into a reassuring presence.",
+      "copy": "The client did not know what content to include, how to organise it or how her practice should look online. My role was to guide those decisions, then build a website that helps visitors understand her services, get to know her approach and feel ready to make contact."
+    },
+    "objectives": [
+      "Give the practice a recognisable visual identity.",
+      "Explain the services and make it easy to get in touch.",
+      "Establish foundations for local search around Tours."
+    ],
+    "constraints": [
+      "A new business with no defined visual direction.",
+      "Content and navigation to develop with a client unfamiliar with creating a website.",
+      "Several services to present within one coherent identity."
+    ],
+    "approach": [
       [
-        "A recognisable identity",
-        "The homepage, practitioner profile, services, pricing and contact pages share a visual language that keeps the journey consistent."
+        "Clarify what the website needs to say.",
+        "I helped the client shape the content: an introduction to her practice, her services and practical information. This structure gives visitors context before they arrange an appointment."
       ],
       [
-        "Information within reach",
-        "Each service has its own page. Clear navigation, images suited to each screen and a compact mobile menu help visitors explore."
+        "Make the visual direction tangible.",
+        "I created the moodboard, visual identity and Figma design. These gave the website a concrete direction before moving into development."
       ],
       [
-        "Care beyond launch",
-        "I maintain and update the delivered website. The build also includes page metadata, structured data and consent-controlled analytics."
+        "Build, launch and stay involved.",
+        "I developed the website, prepared the local search foundations and handled the launch. I continue to look after its maintenance and updates."
       ]
     ],
-    "imageAlt": "Actual homepage of Soins Essentiels, with its beige palette, floral details and image collage.",
-    "caption": "Client website homepage — bespoke design and development.",
-    "secondaryAlt": "Actual sound massage service page of Soins Essentiels.",
-    "secondaryCaption": "A service page — its own content within a shared visual identity.",
-    "note": "Delivered client website for an independent practitioner near Tours, France. I provide ongoing maintenance and updates. Screenshots from the local version of the site.",
-    "linkLabel": "Visit the website"
+    "decisions": [
+      [
+        "A calm atmosphere from the first screen.",
+        "Natural colours, floral details and imagery create a gentle visual world. They give the practice a distinct expression and connect the online introduction with the experience the client wants to offer."
+      ],
+      [
+        "A dedicated page for each service.",
+        "Services have their own pages, while pricing and contact remain easy to identify. Visitors can explore what interests them without having to read through the entire offering."
+      ],
+      [
+        "Local context in the content and the code.",
+        "The pages place the practice in La Riche and the Tours area. Titles, descriptions and structured data reflect that location, providing consistent foundations for local search."
+      ]
+    ],
+    "result": {
+      "title": "A live website. An ongoing working relationship.",
+      "copy": "The client now has a live website presenting her practice, her services and the information visitors need to contact her. The identity, content and development work together as a whole that I continue to maintain with her.",
+      "proofs": [
+        "A live website for desktop and mobile.",
+        "Services, pricing and contact within a consistent journey.",
+        "Maintenance and updates provided since delivery."
+      ],
+      "feedback": "Feedback from people close to the client, relayed by her, describes a sense of calm and tranquillity—the atmosphere the design set out to create."
+    },
+    "enquiry": {
+      "title": "Is your own business taking shape?",
+      "copy": "I can help you define its visual world, organise the content and create the website that brings it together."
+    }
   },
   "sunday": {
     "category": "02 / INTERFACE & DATA",
-    "description": "Making NFL statistics easier to explore, compare and understand.",
-    "intention": "Give the numbers some context.",
-    "discipline": "Interface design / Application development",
+    "description": "Making NFL statistics approachable for new fans, with a visual view of each player’s season and recent form.",
+    "intention": "Understand the game, without getting lost in the numbers.",
+    "discipline": "Product conception / Interface design / Development / Data processing",
     "context": "Personal product · In development",
     "stack": ["Next.js", "React", "TypeScript", "nflverse"],
-    "detail": "With Sunday, I’m designing a way to explore the NFL through its players, teams and statistics. The French-language interface brings together profiles, weekly charts and comparisons, with explanations of individual metrics. This is my own product, currently in development ahead of a planned public launch.",
-    "features": [
+    "detail": "Sunday is a personal product I’m developing for NFL fans, especially people new to the sport. The aim is to make statistics useful to a wider audience: get to know a player, understand their recent form and compare performances without already being an expert.",
+    "imageAlt": "Actual Sunday dashboard showing a player profile and season statistics.",
+    "caption": "The player profile combines a visual reading of the season with indicators and explanations.",
+    "secondaryAlt": "Actual Sunday comparison view with two quarterbacks and per-game statistics.",
+    "secondaryCaption": "The comparison keeps position, season and calculation method visible to give the figures context.",
+    "note": "Personal product in development, not affiliated with the NFL. Statistics: nflverse, CC BY 4.0. Screenshots use the import dated 27 September 2026; the data is not live.",
+    "challenge": {
+      "title": "Turn an intimidating table into something people can read.",
+      "copy": "Statistics tables can put new fans off: many numbers, unfamiliar abbreviations and few clues about how to interpret them. I wanted a different starting point, one that helps people understand what the data says instead of simply displaying it."
+    },
+    "objectives": [
+      "Explain indicators to people without specialist knowledge.",
+      "Show a player’s progress and recent form.",
+      "Make the basis of each comparison clear."
+    ],
+    "constraints": [
+      "Different indicators for different playing positions.",
+      "Partial seasons, missing values and varying numbers of games.",
+      "An initial version based on imported data, without live coverage."
+    ],
+    "approach": [
       [
-        "Read beyond the numbers",
-        "Find a player, explore a season and understand the indicators. The statistics shown adapt to the player’s position."
+        "Start with the fan’s questions.",
+        "The journey centres on a player: how is their season going, what do recent games show and how can they be compared? Those questions shape the interface hierarchy."
       ],
       [
-        "Compare on common ground",
-        "The same position, the same season: the basis of comparison stays clear. Switch between totals and averages per recorded game."
+        "Make the numbers readable.",
+        "Player profiles combine weekly charts, indicators suited to their position and explanations in French. A detailed table remains available on demand for a closer look."
       ],
       [
-        "Care for the data behind the interface",
-        "A TypeScript import validates the CSV files. Calculation functions account for missing values and weighted ratios before results reach the screen."
+        "Make comparisons dependable.",
+        "I separated data imports, validation and metric calculations from presentation. Comparisons make the position, season and calculation method explicit."
       ]
     ],
-    "imageAlt": "Actual Sunday dashboard showing a player profile and season statistics.",
-    "caption": "Player view from the development version — imported 2025 season data.",
-    "secondaryAlt": "Actual Sunday comparison view with two quarterbacks and per-game statistics.",
-    "secondaryCaption": "Player comparison — position, season and aggregation mode remain explicit.",
-    "note": "Personal product in development, not affiliated with the NFL. Statistics: nflverse, CC BY 4.0. Screenshots use the import dated 27 September 2026; the data is not live."
+    "decisions": [
+      [
+        "A chart that shows a trajectory.",
+        "Weekly progression and the last five games give recent form a place in the interface. A season total alone cannot describe how a player is performing now."
+      ],
+      [
+        "Details when they become useful.",
+        "Key figures and explanations come first. A glossary and detailed table let people go further without confronting every visitor with all the complexity at once."
+      ],
+      [
+        "Compare on explicit terms.",
+        "The comparison view uses players in the same position and season, with a choice of totals or per-game averages. This makes the figures easier to interpret when game counts differ."
+      ]
+    ],
+    "result": {
+      "title": "A working first version, ready to explore.",
+      "copy": "The functional version brings together player search, profiles, charts and comparisons. It makes the product direction tangible: start with a question and use visual cues to understand the answer. Development continues; a production launch and user feedback are still ahead.",
+      "proofs": [
+        "Profiles and indicators adapted to different positions.",
+        "Weekly progression and a view of the last five games.",
+        "Player comparisons and explanations in French."
+      ]
+    },
+    "enquiry": {
+      "title": "A product that needs to be easier to understand?",
+      "copy": "Let’s talk about the people who will use it and the questions your interface needs to answer."
+    }
   },
   "chess": {
     "category": "03 / PYTHON APPLICATION",
     "description": "Keep a chess tournament’s players, rounds and results in one place, even offline.",
-    "intention": "Organise the play. Keep track of the game.",
+    "intention": "Keep the tournament in hand, from the first player to the final result.",
     "discipline": "Python development / Application architecture",
     "context": "OpenClassrooms · Python project 4",
     "stack": ["Python", "Object-oriented programming", "MVC", "JSON"],
-    "detail": "This Python application manages a tournament from the terminal: player registration, round creation, result entry and standings. An MVC architecture separates tournament rules from the interface, while JSON storage allows a session to be resumed.",
-    "features": [
-      [
-        "Follow the whole tournament",
-        "Register players, create the tournament, generate rounds and record wins or draws."
-      ],
-      [
-        "Keep the rules readable",
-        "Player, match, round and tournament models are independent of the console views. Later pairings take scores into account while trying to avoid rematches."
-      ],
-      [
-        "Find the information again",
-        "JSON files preserve the data. Five reports provide access to players, tournaments and the history of rounds and matches."
-      ]
-    ],
+    "detail": "This training project takes a chess club’s needs as its starting point: register players, organise rounds and track results. I developed a Python terminal application to bring these tasks together, including when no internet connection is available.",
     "imageAlt": "Sculptural illustration of a marble king, a dark knight and a pawn on a chessboard.",
     "caption": "Editorial illustration generated for the project. The application runs in the terminal.",
     "terminalTitle": "A look at the standings",
     "terminalCaption": "Report produced by the application with eight fictional players for this demonstration.",
-    "note": "Built during the OpenClassrooms Python programme. “Chess Manager” is the presentation name. The demonstration runs the application with fictional players."
+    "note": "Built during the OpenClassrooms Python programme. “Chess Manager” is the presentation name. The demonstration runs the application with fictional players.",
+    "challenge": {
+      "title": "Keep the tournament consistent at every step.",
+      "copy": "Tournament management involves more than producing a ranking. Players, matches, scores and rounds need to stay connected, and the organiser must be able to resume without losing the tournament’s state. The application had to make that sequence usable through a console interface."
+    },
+    "objectives": [
+      "Handle registrations, rounds and results in one tool.",
+      "Restore tournament state after closing the program.",
+      "Access the information through dedicated reports."
+    ],
+    "constraints": [
+      "Fully offline operation.",
+      "A command-line interface and local JSON storage.",
+      "Separation of responsibilities through MVC architecture."
+    ],
+    "approach": [
+      [
+        "Model the tournament.",
+        "I represented players, matches, rounds and tournaments separately. Their relationships underpin the rules and the data that needs to be stored."
+      ],
+      [
+        "Organise the user’s actions.",
+        "Menus follow the organiser’s tasks: register players, start a round, enter results and view reports. Controllers connect these actions to the models."
+      ],
+      [
+        "Support resuming and reviewing.",
+        "JSON storage preserves data between sessions. Reports make player information and the history of rounds and matches available again."
+      ]
+    ],
+    "decisions": [
+      [
+        "Separate rules from presentation.",
+        "MVC keeps tournament logic independent of console messages and menus. Rules and presentation can evolve separately."
+      ],
+      [
+        "Save without an external service.",
+        "JSON files meet the offline requirement and allow tournaments to be reloaded. Everyday use requires neither a server nor a remote database."
+      ],
+      [
+        "Account for earlier matches.",
+        "After the first round, pairings consider scores while seeking to avoid opponents who have already played each other. This logic supports the tournament as it progresses."
+      ]
+    ],
+    "result": {
+      "title": "A complete workflow, with data that can be recovered.",
+      "copy": "The program covers registration, round creation, result entry and reporting. The demonstration below shows real application output using eight fictional players. This is a training project; no deployment in a real club is claimed.",
+      "proofs": [
+        "Management of players, tournaments, rounds and matches.",
+        "Local storage and restoration of tournament state.",
+        "Five reports for reviewing the information."
+      ]
+    },
+    "enquiry": {
+      "title": "Several tasks that could work better in one tool?",
+      "copy": "Let’s talk about how you work and which tasks an application could help you organise."
+    }
   },
   "optimizer": {
     "category": "04 / PYTHON & ALGORITHMS",
     "description": "Find the best combination within a fixed budget, then verify the result.",
-    "intention": "A fixed budget. A better combination.",
+    "intention": "Find a solution. Be able to explain the result.",
     "discipline": "Python development / Algorithm optimisation",
     "context": "OpenClassrooms · Python project 7",
     "stack": ["Python", "NumPy", "Decimal", "CSV"],
-    "detail": "How do you choose a combination of stocks within €500 when each stock can be bought only once? This project compares exhaustive search with a dynamic programming solution. The work covers the calculation, validation of input data and reconstruction of a result that can be checked.",
-    "features": [
-      [
-        "Compare two approaches",
-        "Exhaustive search provides a reference on the small dataset. Dynamic programming uses NumPy arrays to process the larger files."
-      ],
-      [
-        "Keep amounts precise",
-        "Costs are represented in integer cents and source values are parsed with Decimal. The chosen combination can be reconstructed from the program’s decisions."
-      ],
-      [
-        "Account for the input",
-        "Invalid rows, conflicting names and duplicates are handled explicitly. On dataset1.csv, 954 items are accepted and 47 rows are excluded."
-      ]
-    ],
+    "detail": "This Python exercise simulates a constrained selection problem: choose a combination of shares within a fixed budget. My work focuses on the algorithm, input quality and a result that can be checked. Returns come from the supplied training datasets.",
     "imageAlt": "Graphic of the best theoretical gain for increasing budgets, calculated from the project’s first dataset.",
     "caption": "Budget and theoretical gain — 26 points calculated by the program on dataset1.csv.",
     "terminalTitle": "A result you can check.",
     "terminalCaption": "Execution excerpt verified on 21 October 2026. Both algorithms return the same gain on the small dataset.",
-    "note": "Algorithm exercise using supplied, fixed-return datasets. These are theoretical outputs for the exercise, not realised investment returns or a trading product."
+    "note": "Algorithm exercise using supplied, fixed-return datasets. These are theoretical outputs for the exercise, not realised investment returns or a trading product.",
+    "challenge": {
+      "title": "Explore the possibilities without enumerating them all.",
+      "copy": "Exhaustive search can verify a small dataset, but the number of combinations grows rapidly. The challenge was to handle larger files while respecting the budget and retaining the exact list of selected shares."
+    },
+    "objectives": [
+      "Maximise theoretical gain without exceeding €500.",
+      "Use a suitable approach for larger datasets.",
+      "Return a selection and amounts that can be checked."
+    ],
+    "constraints": [
+      "Each share can be purchased at most once.",
+      "Amounts must remain accurate to the cent.",
+      "Files contain invalid rows, duplicates and ambiguous names."
+    ],
+    "approach": [
+      [
+        "Build a reference for comparison.",
+        "Exhaustive search tries every combination in the small dataset. It provides a reference against which to check the optimised solution."
+      ],
+      [
+        "Change how the search works.",
+        "I used dynamic programming to solve subproblems by budget and retain the decisions needed to reconstruct the selection."
+      ],
+      [
+        "Check both inputs and outputs.",
+        "Amounts are normalised, problematic rows are handled explicitly and the optimised result is compared with the reference on the small dataset."
+      ]
+    ],
+    "decisions": [
+      [
+        "Integer cents for costs.",
+        "Reading values with Decimal and calculating in integer cents avoids relying on floating-point approximations to stay within budget."
+      ],
+      [
+        "A reconstructed selection, not just a score.",
+        "The program retains the decisions needed to recover the selected shares. The reported amount can be traced back to a concrete list."
+      ],
+      [
+        "Explicit handling of rejected data.",
+        "Invalid rows, duplicates and conflicting names are not silently folded into the calculation. A summary separates accepted data from rejected rows."
+      ]
+    ],
+    "result": {
+      "title": "A quantified selection that can be checked.",
+      "copy": "On the first dataset, the program selects 22 shares for €499.96, with a theoretical gain of €198.55. On the small dataset, dynamic programming and exhaustive search produce the same gain. These figures describe the exercise, not actual investment performance.",
+      "proofs": [
+        "954 shares accepted and 47 rows rejected from dataset1.csv.",
+        "22 shares selected for a total cost of €499.96.",
+        "The same gain from both methods on the small dataset."
+      ]
+    },
+    "enquiry": {
+      "title": "A business need to turn into a dependable tool?",
+      "copy": "I can help you clarify the constraints, organise the data and build a solution whose results remain understandable."
+    }
   }
 }

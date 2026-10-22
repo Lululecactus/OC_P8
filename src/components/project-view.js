@@ -7,11 +7,60 @@ export function createStudyView({ getScene, isReduced }) {
   const dialog = document.querySelector('#study-dialog');
   const details = dialog.querySelector('.study-details');
   const discover = dialog.querySelector('#study-discover');
+  const viewer = document.querySelector('#image-viewer');
+  const viewerFrame = viewer.querySelector('#image-viewer-frame');
+  let imageTrigger = null;
   let currentIndex = 0;
   let source = null,
     closing = false,
     animated = false,
     returnFrame = 0;
+
+  function closeImage() {
+    viewer.close();
+  }
+
+  function openImage(event) {
+    if (closing || viewer.open) return;
+    const trigger = event.currentTarget
+      .closest('.study-figure')
+      .querySelector('.study-visual-trigger');
+    const study = getProject(currentIndex);
+    const secondary = trigger.id === 'study-secondary-open';
+    const imageSource = secondary ? study.secondary : study.image;
+    const original = trigger.firstElementChild;
+    if (!original) return;
+    let visual;
+    if (imageSource) {
+      visual = new Image();
+      visual.src = imageSource;
+      visual.alt = secondary ? study.secondaryAlt : study.imageAlt;
+      visual.draggable = false;
+    } else {
+      visual = original.cloneNode();
+      if (original instanceof HTMLCanvasElement) visual.getContext('2d').drawImage(original, 0, 0);
+    }
+    viewerFrame.replaceChildren(visual);
+    viewer.querySelector('#image-viewer-title').textContent = study.title;
+    viewer.querySelector('#image-viewer-caption').textContent = secondary
+      ? study.secondaryCaption
+      : study.caption;
+    imageTrigger = event.currentTarget;
+    viewer.showModal();
+  }
+
+  dialog.querySelectorAll('.study-visual-trigger, [data-image-open]').forEach((button) => {
+    button.addEventListener('click', openImage);
+  });
+  viewer.querySelector('#image-viewer-close').addEventListener('click', closeImage);
+  viewer.addEventListener('click', (event) => {
+    if (event.target === viewer || event.target === viewerFrame) closeImage();
+  });
+  viewer.addEventListener('close', () => {
+    viewerFrame.replaceChildren();
+    imageTrigger?.focus({ preventScroll: true });
+    imageTrigger = null;
+  });
 
   function showFallbackImage() {
     const original = dialog.querySelector('#study-art').firstElementChild;
@@ -26,6 +75,7 @@ export function createStudyView({ getScene, isReduced }) {
     cancelAnimationFrame(returnFrame);
     dialog.close();
     document.body.classList.remove('modal-open', 'study-open');
+    dialog.classList.remove('study-reading');
     source?.focus({ preventScroll: true });
     source = null;
     closing = false;
@@ -67,9 +117,17 @@ export function createStudyView({ getScene, isReduced }) {
     event.preventDefault();
     close();
   });
+  dialog.addEventListener(
+    'scroll',
+    () => dialog.classList.toggle('study-reading', dialog.scrollTop >= details.offsetTop - 90),
+    { passive: true },
+  );
   discover.addEventListener('click', () => {
     details.inert = false;
-    dialog.scrollTo({ top: details.offsetTop, behavior: isReduced() ? 'instant' : 'smooth' });
+    dialog.scrollTo({
+      top: details.offsetTop,
+      behavior: isReduced() ? 'instant' : 'smooth',
+    });
   });
 
   function setProgress(value) {
@@ -83,6 +141,30 @@ export function createStudyView({ getScene, isReduced }) {
     discover.disabled = !complete;
     // Reveal the gallery controls only as the surface returns to its place.
     document.body.style.setProperty('--study-cover', smoothRange(0, 0.28, value));
+  }
+
+  function renderList(selector, entries) {
+    dialog.querySelector(selector).replaceChildren(
+      ...entries.map((copy) => {
+        const item = document.createElement('li');
+        item.textContent = copy;
+        return item;
+      }),
+    );
+  }
+
+  function renderEntries(selector, entries, tag) {
+    dialog.querySelector(selector).replaceChildren(
+      ...entries.map(([title, copy]) => {
+        const item = document.createElement(tag);
+        const heading = document.createElement('h5');
+        heading.textContent = title;
+        const paragraph = document.createElement('p');
+        paragraph.textContent = copy;
+        item.append(heading, paragraph);
+        return item;
+      }),
+    );
   }
 
   function renderContent(index) {
@@ -109,20 +191,19 @@ export function createStudyView({ getScene, isReduced }) {
       link.removeAttribute('href');
       link.textContent = '';
     }
-    const featureList = dialog.querySelector('#study-features');
-    featureList.replaceChildren(
-      ...study.features.map(([title, copy], featureIndex) => {
-        const item = document.createElement('article');
-        const number = document.createElement('span');
-        number.textContent = `0${featureIndex + 1}`;
-        const heading = document.createElement('h4');
-        heading.textContent = title;
-        const paragraph = document.createElement('p');
-        paragraph.textContent = copy;
-        item.append(number, heading, paragraph);
-        return item;
-      }),
-    );
+    dialog.querySelector('#study-challenge-title').textContent = study.challenge.title;
+    dialog.querySelector('#study-challenge-copy').textContent = study.challenge.copy;
+    renderList('#study-objectives', study.objectives);
+    renderList('#study-constraints', study.constraints);
+    renderEntries('#study-approach', study.approach, 'li');
+    renderEntries('#study-decisions', study.decisions, 'article');
+    dialog.querySelector('#study-result-title').textContent = study.result.title;
+    dialog.querySelector('#study-result-copy').textContent = study.result.copy;
+    renderList('#study-result-proofs', study.result.proofs);
+    dialog.querySelector('#study-feedback').hidden = !study.result.feedback;
+    dialog.querySelector('#study-feedback-copy').textContent = study.result.feedback ?? '';
+    dialog.querySelector('#project-enquiry-title').textContent = study.enquiry.title;
+    dialog.querySelector('#project-enquiry-copy').textContent = study.enquiry.copy;
     const secondary = dialog.querySelector('#study-secondary');
     secondary.hidden = !study.secondary;
     const secondaryImage = dialog.querySelector('#study-secondary-image');

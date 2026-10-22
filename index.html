@@ -505,7 +505,7 @@
         <div class="study-bottom">
           <p id="study-description"></p>
           <button data-i18n="project.explore" id="study-discover" type="button">
-            Explore the project
+            Explore the process
           </button>
         </div>
       </div>
@@ -520,7 +520,7 @@
         <div class="study-detail-copy">
           <dl>
             <div>
-              <dt data-i18n="project.meta1">Focus</dt>
+              <dt data-i18n="project.meta1">My role</dt>
               <dd id="study-discipline"></dd>
             </div>
             <div>
@@ -537,41 +537,118 @@
             <a hidden="" id="study-project-link" rel="noopener noreferrer" target="_blank"></a>
           </div>
         </div>
-        <figure>
-          <div class="study-art" id="study-art"></div>
-          <figcaption id="study-caption"></figcaption>
-        </figure>
-        <section
-          aria-label="What went into the project"
-          class="project-features"
-          data-i18n-aria-label="project.features"
-          id="study-features"
-        ></section>
-        <figure class="project-secondary" hidden="" id="study-secondary">
-          <img alt="" id="study-secondary-image" loading="lazy" />
-          <figcaption id="study-secondary-caption"></figcaption>
-        </figure>
-        <section
-          aria-labelledby="study-evidence-title"
-          class="project-evidence"
-          hidden=""
-          id="study-evidence"
-        >
-          <div class="evidence-intro">
-            <p class="study-kicker" data-i18n="project.evidence">FROM THE RUNNING CODE</p>
-            <h4 id="study-evidence-title"></h4>
+        <section class="case-brief" aria-labelledby="study-challenge-title">
+          <div>
+            <p class="study-kicker" data-i18n="project.challenge">01 / THE STARTING POINT</p>
+            <h4 class="case-title" id="study-challenge-title"></h4>
+            <p class="case-copy" id="study-challenge-copy"></p>
           </div>
-          <pre><code id="study-terminal"></code></pre>
-          <p id="study-terminal-caption"></p>
+          <aside class="case-context">
+            <div>
+              <h5 data-i18n="project.objectives">The objectives</h5>
+              <ul id="study-objectives"></ul>
+            </div>
+            <div>
+              <h5 data-i18n="project.constraints">The project constraints</h5>
+              <ul id="study-constraints"></ul>
+            </div>
+          </aside>
+        </section>
+        <figure class="study-figure">
+          <button
+            class="study-art study-visual-trigger"
+            id="study-art"
+            type="button"
+            aria-haspopup="dialog"
+            aria-describedby="study-caption"
+            data-i18n-aria-label="project.enlargePrimary"
+            aria-label="Enlarge the project visual"
+          ></button>
+          <figcaption>
+            <span id="study-caption"></span>
+            <button
+              class="study-enlarge-hint"
+              data-image-open
+              type="button"
+              aria-haspopup="dialog"
+              data-i18n="project.enlarge"
+            >
+              Enlarge
+            </button>
+          </figcaption>
+        </figure>
+        <section class="case-section" aria-labelledby="study-approach-title">
+          <p class="study-kicker" data-i18n="project.approach">02 / THE APPROACH</p>
+          <h4 class="case-title" data-i18n="project.approachTitle" id="study-approach-title">
+            From the need to the solution.
+          </h4>
+          <ol class="case-steps" id="study-approach"></ol>
+        </section>
+        <section class="case-section case-decisions" aria-labelledby="study-decisions-title">
+          <p class="study-kicker" data-i18n="project.decisions">03 / THE DECISIONS</p>
+          <h4 class="case-title" data-i18n="project.decisionsTitle" id="study-decisions-title">
+            Why these choices.
+          </h4>
+          <div id="study-decisions"></div>
+        </section>
+        <figure class="study-figure project-secondary" hidden="" id="study-secondary">
+          <button
+            class="study-visual-trigger"
+            id="study-secondary-open"
+            type="button"
+            aria-haspopup="dialog"
+            aria-describedby="study-secondary-caption"
+            data-i18n-aria-label="project.enlargeSecondary"
+            aria-label="Enlarge the detail view"
+          >
+            <img alt="" id="study-secondary-image" loading="lazy" />
+          </button>
+          <figcaption>
+            <span id="study-secondary-caption"></span>
+            <button
+              class="study-enlarge-hint"
+              data-image-open
+              type="button"
+              aria-haspopup="dialog"
+              data-i18n="project.enlarge"
+            >
+              Enlarge
+            </button>
+          </figcaption>
+        </figure>
+        <section class="case-section case-result" aria-labelledby="study-result-title">
+          <p class="study-kicker" data-i18n="project.result">04 / THE RESULT</p>
+          <div class="case-result-layout">
+            <div>
+              <h4 class="case-title" id="study-result-title"></h4>
+              <p class="case-copy" id="study-result-copy"></p>
+            </div>
+            <ul class="case-proofs" id="study-result-proofs"></ul>
+          </div>
+          <aside class="case-feedback" hidden="" id="study-feedback">
+            <p class="study-kicker" data-i18n="project.feedback">INFORMAL FEEDBACK</p>
+            <p id="study-feedback-copy"></p>
+          </aside>
+          <section
+            aria-labelledby="study-evidence-title"
+            class="project-evidence"
+            hidden=""
+            id="study-evidence"
+          >
+            <div class="evidence-intro">
+              <p class="study-kicker" data-i18n="project.evidence">FROM THE RUNNING CODE</p>
+              <h5 id="study-evidence-title"></h5>
+            </div>
+            <pre><code id="study-terminal"></code></pre>
+            <p id="study-terminal-caption"></p>
+          </section>
         </section>
         <section aria-labelledby="project-enquiry-title" class="project-enquiry">
           <div>
-            <h4 data-i18n="project.enquiryTitle" id="project-enquiry-title">
-              What do you have in mind?
-            </h4>
-            <p data-i18n="project.enquiryCopy">
-              A free first conversation to get to know each other and explore your idea. No
-              commitment.
+            <h4 id="project-enquiry-title"></h4>
+            <p id="project-enquiry-copy"></p>
+            <p class="case-enquiry-note" data-i18n="project.enquiryNote">
+              A free first conversation, with no commitment.
             </p>
           </div>
           <a data-i18n="project.enquiryCta" href="mailto:nicolas.kulpa-hurault@hotmail.com"
@@ -585,6 +662,21 @@
           </button>
         </footer>
       </section>
+    </dialog>
+    <dialog
+      class="image-viewer"
+      id="image-viewer"
+      aria-labelledby="image-viewer-title"
+      aria-describedby="image-viewer-caption"
+    >
+      <header class="image-viewer-top">
+        <h2 id="image-viewer-title"></h2>
+        <button id="image-viewer-close" type="button" autofocus data-i18n="project.closeImage">
+          Close preview
+        </button>
+      </header>
+      <div class="image-viewer-frame" id="image-viewer-frame"></div>
+      <p id="image-viewer-caption"></p>
     </dialog>
     <dialog
       aria-describedby="contact-intro"

@@ -164,7 +164,7 @@ document
   .forEach((button) =>
     button.addEventListener('click', (event) => contactView.open(event.currentTarget)),
   );
-document.querySelectorAll('dialog:not(#study-dialog):not(#contact-dialog)').forEach((dialog) => {
+document.querySelectorAll('#credits-dialog').forEach((dialog) => {
   dialog.querySelector('[data-close]').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', (event) => {
     const r = dialog.getBoundingClientRect();

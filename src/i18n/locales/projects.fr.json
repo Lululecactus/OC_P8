@@ -1,115 +1,280 @@
 {
   "soins": {
     "category": "01 / WEB DESIGN & DÉVELOPPEMENT",
-    "description": "Un site sur mesure pour faire découvrir une pratique du bien-être et faciliter la prise de contact.",
-    "intention": "Faire connaissance, avant le premier rendez-vous.",
-    "discipline": "Design / Développement / Maintenance",
+    "description": "Accompagner le lancement d’une activité de bien-être, de la première intention à un site prêt à accueillir ses clients.",
+    "intention": "Une activité qui débute. Un univers qui prend forme.",
+    "discipline": "Cadrage / Identité visuelle / Maquette Figma / Développement / Mise en ligne / Maintenance",
     "context": "Projet client · Livré · Suivi en cours",
     "stack": ["HTML", "CSS", "JavaScript"],
-    "detail": "J’ai conçu et développé le site de Soins Essentiels pour présenter la praticienne, ses prestations et les informations utiles à la prise de contact. La palette naturelle, les détails floraux et le travail des images composent un univers chaleureux, décliné sur ordinateur et mobile. Depuis la livraison, j’assure la maintenance et les mises à jour.",
-    "features": [
+    "detail": "Soins Essentiels est l’activité d’une énergéticienne installée à La Riche, près de Tours. Elle s’adresse à une clientèle locale qui souhaite découvrir ses accompagnements de bien-être. Au lancement de son activité, la cliente m’a confié la création de sa présence en ligne, sans identité visuelle ni direction définie pour le site.",
+    "imageAlt": "Page d’accueil réelle de Soins Essentiels, avec sa palette beige, ses détails floraux et sa composition d’images.",
+    "caption": "L’accueil réunit l’univers visuel, la présentation de la pratique et les accès aux accompagnements.",
+    "secondaryAlt": "Page réelle de la prestation de massage sonore de Soins Essentiels.",
+    "secondaryCaption": "Une page de prestation dédiée : approfondir un accompagnement dans la même identité visuelle.",
+    "note": "Projet client livré et maintenu. Captures du site réalisé. Retours qualitatifs relayés par la cliente.",
+    "linkLabel": "Visiter le site",
+    "challenge": {
+      "title": "Transformer un point de départ flou en une présence rassurante.",
+      "copy": "La cliente ne savait pas quels contenus présenter, comment les organiser ni quelle image donner à son activité. Mon rôle était de l’accompagner dans ces choix, puis de créer un site qui permette de comprendre son offre, de découvrir sa pratique et de prendre contact en confiance."
+    },
+    "objectives": [
+      "Donner une identité reconnaissable à l’activité.",
+      "Présenter les accompagnements et faciliter la prise de contact.",
+      "Poser les bases du référencement local autour de Tours."
+    ],
+    "constraints": [
+      "Une activité en lancement, sans direction visuelle définie.",
+      "Des contenus et un parcours à construire avec une cliente peu familière du web.",
+      "Plusieurs prestations à présenter dans un ensemble cohérent."
+    ],
+    "approach": [
       [
-        "Un univers reconnaissable",
-        "Accueil, présentation, prestations, tarifs et contact partagent une même identité. Le visiteur retrouve ses repères tout au long du parcours."
+        "Clarifier ce que le site doit raconter.",
+        "J’ai accompagné la cliente dans la définition des contenus : sa présentation, ses accompagnements et les informations pratiques. Cette structure donne au visiteur des repères avant de prendre rendez-vous."
       ],
       [
-        "Des informations faciles à trouver",
-        "Chaque prestation dispose de sa page. La navigation, les images adaptées à l’écran et le menu mobile facilitent la découverte du site."
+        "Donner une direction visuelle au projet.",
+        "J’ai réalisé le moodboard, l’identité visuelle et la maquette Figma. Ils ont permis de donner une forme concrète à l’univers du site avant de passer au développement."
       ],
       [
-        "Un suivi après la mise en ligne",
-        "Je prends en charge la maintenance et les mises à jour du site livré. L’intégration comprend aussi les métadonnées, les données structurées et la gestion du consentement pour la mesure d’audience."
+        "Concrétiser, puis rester présent.",
+        "J’ai développé le site, préparé les éléments de référencement local et assuré sa mise en production. Je continue aujourd’hui à prendre en charge sa maintenance et ses mises à jour."
       ]
     ],
-    "imageAlt": "Page d’accueil réelle de Soins Essentiels, avec sa palette beige, ses détails floraux et sa composition d’images.",
-    "caption": "Accueil du site client — design et développement sur mesure.",
-    "secondaryAlt": "Page réelle de la prestation de massage sonore de Soins Essentiels.",
-    "secondaryCaption": "Page de prestation — un contenu propre à chaque soin, dans une identité commune.",
-    "note": "Site client livré pour une praticienne de la région de Tours. Maintenance et mises à jour assurées par mes soins. Captures de la version locale du site.",
-    "linkLabel": "Visiter le site"
+    "decisions": [
+      [
+        "Une atmosphère calme, dès l’arrivée.",
+        "La palette naturelle, les détails floraux et les images installent un univers doux. Ces choix donnent une expression visuelle à l’activité et créent une continuité entre la découverte du site et l’accompagnement proposé."
+      ],
+      [
+        "Une page pour chaque accompagnement.",
+        "Les prestations disposent de pages dédiées, tandis que les tarifs et le contact restent identifiables. Le visiteur peut approfondir ce qui l’intéresse sans devoir parcourir toute l’offre."
+      ],
+      [
+        "Un ancrage local dans le contenu et le code.",
+        "Les pages situent l’activité à La Riche et dans la région de Tours. Titres, descriptions et données structurées reprennent ce contexte pour poser des bases cohérentes de référencement local."
+      ]
+    ],
+    "result": {
+      "title": "Un site livré. Un accompagnement qui continue.",
+      "copy": "La cliente dispose aujourd’hui d’un site en ligne qui présente son univers, ses prestations et les informations nécessaires pour la contacter. L’identité, les contenus et le développement forment un ensemble que je continue à entretenir avec elle.",
+      "proofs": [
+        "Site accessible en ligne, sur ordinateur et mobile.",
+        "Prestations, tarifs et contact réunis dans un parcours commun.",
+        "Maintenance et mises à jour assurées depuis la livraison."
+      ],
+      "feedback": "Les retours de son entourage, relayés par la cliente, évoquent une sensation de calme et d’apaisement : l’ambiance recherchée dans le design."
+    },
+    "enquiry": {
+      "title": "Votre activité commence à prendre forme ?",
+      "copy": "Je peux vous accompagner pour définir votre univers, structurer vos contenus et créer le site qui les réunit."
+    }
   },
   "sunday": {
     "category": "02 / INTERFACE & DONNÉES",
-    "description": "Rendre les statistiques NFL plus faciles à explorer, à comparer et à comprendre.",
-    "intention": "Donner du sens aux chiffres.",
-    "discipline": "Design d’interface / Développement d’application",
+    "description": "Ouvrir les statistiques NFL aux nouveaux fans, avec une lecture visuelle de la saison et de la forme des joueurs.",
+    "intention": "Comprendre le jeu, sans se perdre dans les chiffres.",
+    "discipline": "Conception du produit / Design d’interface / Développement / Traitement des données",
     "context": "Produit personnel · En développement",
     "stack": ["Next.js", "React", "TypeScript", "nflverse"],
-    "detail": "Avec Sunday, je conçois un outil pour explorer la NFL à travers ses joueurs, ses équipes et leurs statistiques. L’interface en français réunit profils, graphiques hebdomadaires et comparaisons, avec des explications pour comprendre les indicateurs. Je développe ce produit personnel en vue de sa mise en production.",
-    "features": [
+    "detail": "Sunday est un produit personnel que je développe pour les fans de NFL, notamment ceux qui découvrent le sport. L’idée est de rendre les statistiques accessibles au plus grand nombre : comprendre un joueur, lire sa forme récente et comparer ses performances sans être déjà spécialiste.",
+    "imageAlt": "Tableau de bord réel de Sunday présentant le profil d’un joueur et ses statistiques de saison.",
+    "caption": "La fiche joueur : une lecture visuelle de la saison, accompagnée d’indicateurs et d’explications.",
+    "secondaryAlt": "Vue réelle de comparaison de deux quarterbacks dans Sunday, avec leurs statistiques par match.",
+    "secondaryCaption": "Le comparateur garde le poste, la saison et le mode de calcul visibles pour situer les chiffres.",
+    "note": "Produit personnel en cours de développement, sans affiliation avec la NFL. Statistiques : nflverse, CC BY 4.0. Captures réalisées avec l’import du 27 septembre 2026 ; les données ne sont pas en direct.",
+    "challenge": {
+      "title": "Passer d’un tableau intimidant à une lecture accessible.",
+      "copy": "Les tableaux de statistiques peuvent décourager les nouveaux fans : beaucoup de chiffres, des abréviations et peu de repères pour les interpréter. Je voulais proposer une autre porte d’entrée, qui aide à comprendre ce que racontent les données plutôt que de simplement les afficher."
+    },
+    "objectives": [
+      "Rendre les indicateurs compréhensibles pour un public non expert.",
+      "Faire apparaître l’évolution d’un joueur et sa forme récente.",
+      "Permettre des comparaisons dont les critères restent clairs."
+    ],
+    "constraints": [
+      "Des indicateurs différents selon le poste du joueur.",
+      "Des saisons partielles, des valeurs manquantes et des volumes de matchs variables.",
+      "Une première version alimentée par des imports, sans données en direct."
+    ],
+    "approach": [
       [
-        "Passer du chiffre à la lecture",
-        "Rechercher un joueur, parcourir sa saison et comprendre ses indicateurs. Les statistiques affichées s’adaptent à son poste."
+        "Partir des questions du fan.",
+        "Le parcours s’organise autour d’un joueur : comment se déroule sa saison, que montrent ses derniers matchs et comment le comparer ? Ces questions guident la hiérarchie de l’interface."
       ],
       [
-        "Comparer ce qui est comparable",
-        "Même poste, même saison : les bases de comparaison restent explicites. On peut passer des totaux aux moyennes par match enregistré."
+        "Rendre les chiffres lisibles.",
+        "Les fiches associent courbes hebdomadaires, indicateurs adaptés au poste et explications en français. Le tableau détaillé reste disponible à la demande pour approfondir la lecture."
       ],
       [
-        "Soigner ce qui alimente l’interface",
-        "Un import TypeScript valide les fichiers CSV. Les calculs prennent en compte les valeurs manquantes et les ratios pondérés avant d’afficher les résultats."
+        "Fiabiliser ce que l’on compare.",
+        "J’ai séparé l’import, la validation des données et le calcul des indicateurs de leur affichage. Les comparaisons explicitent le poste, la saison et le mode de calcul."
       ]
     ],
-    "imageAlt": "Tableau de bord réel de Sunday présentant le profil d’un joueur et ses statistiques de saison.",
-    "caption": "Vue joueur de la version en développement — données importées de la saison 2025.",
-    "secondaryAlt": "Vue réelle de comparaison de deux quarterbacks dans Sunday, avec leurs statistiques par match.",
-    "secondaryCaption": "Comparaison de joueurs — poste, saison et mode de calcul restent explicites.",
-    "note": "Produit personnel en cours de développement, sans affiliation avec la NFL. Statistiques : nflverse, CC BY 4.0. Captures réalisées avec l’import du 27 septembre 2026 ; les données ne sont pas en direct."
+    "decisions": [
+      [
+        "Une courbe pour voir une trajectoire.",
+        "L’évolution par semaine et les cinq derniers matchs donnent une place à la forme récente. Un total de saison ne raconte pas à lui seul la dynamique d’un joueur."
+      ],
+      [
+        "Des détails quand ils deviennent utiles.",
+        "Les chiffres essentiels et leurs explications viennent en premier. Le glossaire et le tableau détaillé permettent ensuite d’aller plus loin sans imposer toute la complexité dès l’arrivée."
+      ],
+      [
+        "Comparer sur des bases explicites.",
+        "Le comparateur rapproche des joueurs de même poste, sur une même saison, avec le choix entre totaux et moyennes par match. Cela rend la lecture plus transparente lorsque le nombre de matchs diffère."
+      ]
+    ],
+    "result": {
+      "title": "Une première version qui permet déjà d’explorer.",
+      "copy": "La version fonctionnelle réunit recherche de joueurs, fiches, courbes et comparaisons. Elle matérialise la direction du produit : partir d’une question et trouver des repères visuels pour y répondre. Le projet reste en développement ; la mise en production et les retours d’utilisateurs sont encore à venir.",
+      "proofs": [
+        "Profils et indicateurs adaptés aux différents postes.",
+        "Évolution hebdomadaire et lecture des cinq derniers matchs.",
+        "Comparaison entre joueurs et explications en français."
+      ]
+    },
+    "enquiry": {
+      "title": "Un produit à rendre plus simple à comprendre ?",
+      "copy": "Parlons des personnes qui vont l’utiliser et des questions auxquelles votre interface doit répondre."
+    }
   },
   "chess": {
     "category": "03 / APPLICATION PYTHON",
     "description": "Centraliser les joueurs, les rondes et les résultats d’un tournoi d’échecs, même hors ligne.",
-    "intention": "Organiser le jeu. Garder le fil.",
+    "intention": "Garder le tournoi en main, du premier joueur au dernier résultat.",
     "discipline": "Développement Python / Architecture applicative",
     "context": "OpenClassrooms · Projet Python 4",
     "stack": ["Python", "Programmation orientée objet", "MVC", "JSON"],
-    "detail": "Cette application Python permet de préparer et de suivre un tournoi depuis le terminal : inscriptions, création des rondes, saisie des résultats et consultation du classement. L’architecture MVC sépare les règles du tournoi de l’interface, tandis que le stockage JSON permet de reprendre une session.",
-    "features": [
-      [
-        "Suivre le tournoi de bout en bout",
-        "Inscrire les joueurs, créer le tournoi, générer les rondes puis enregistrer les victoires et les matchs nuls."
-      ],
-      [
-        "Garder des règles lisibles",
-        "Les modèles de joueur, match, ronde et tournoi sont indépendants des vues console. Les appariements suivants tiennent compte des scores en cherchant à éviter les rencontres déjà jouées."
-      ],
-      [
-        "Retrouver les informations",
-        "Les données sont conservées en JSON. Cinq rapports donnent accès aux joueurs, aux tournois et à l’historique des rondes et des matchs."
-      ]
-    ],
+    "detail": "Ce projet de formation prend pour cadre les besoins d’un club d’échecs : inscrire ses joueurs, organiser les rondes et suivre les résultats. J’ai développé une application Python utilisable dans le terminal, pensée pour centraliser ces opérations même sans connexion internet.",
     "imageAlt": "Illustration sculpturale d’un roi en marbre, d’un cavalier sombre et d’un pion sur un échiquier.",
     "caption": "Illustration éditoriale générée pour le projet. L’application fonctionne dans le terminal.",
     "terminalTitle": "Un aperçu du classement",
     "terminalCaption": "Rapport produit par l’application avec huit joueurs fictifs pour cette démonstration.",
-    "note": "Projet réalisé dans le parcours Développeur Python d’OpenClassrooms. « Chess Manager » est son nom de présentation. La démonstration utilise le programme et des joueurs fictifs."
+    "note": "Projet réalisé dans le parcours Développeur Python d’OpenClassrooms. « Chess Manager » est son nom de présentation. La démonstration utilise le programme et des joueurs fictifs.",
+    "challenge": {
+      "title": "Conserver un tournoi cohérent à chaque étape.",
+      "copy": "La gestion ne s’arrête pas à produire un classement. Il faut relier les joueurs, les rencontres, les scores et les rondes, puis pouvoir reprendre le tournoi sans perdre son état. L’application devait rendre cet enchaînement exploitable depuis une interface console."
+    },
+    "objectives": [
+      "Suivre les inscriptions, les rondes et les résultats dans un même outil.",
+      "Retrouver l’état du tournoi après fermeture du programme.",
+      "Consulter les informations à travers des rapports dédiés."
+    ],
+    "constraints": [
+      "Fonctionnement entièrement hors ligne.",
+      "Interface en ligne de commande et sauvegarde locale en JSON.",
+      "Séparation des responsabilités avec une architecture MVC."
+    ],
+    "approach": [
+      [
+        "Modéliser le déroulement du tournoi.",
+        "J’ai représenté séparément les joueurs, les matchs, les rondes et les tournois. Leurs relations constituent la base des règles et des données à conserver."
+      ],
+      [
+        "Organiser les actions de l’utilisateur.",
+        "Les menus suivent les tâches de l’organisateur : inscrire, lancer une ronde, saisir les résultats et consulter les rapports. Les contrôleurs relient ces actions aux modèles."
+      ],
+      [
+        "Prévoir la reprise et la consultation.",
+        "Le stockage JSON conserve les données entre deux sessions. Les rapports permettent de retrouver les joueurs et l’historique des rondes et des rencontres."
+      ]
+    ],
+    "decisions": [
+      [
+        "Séparer les règles de l’affichage.",
+        "L’architecture MVC garde la logique du tournoi indépendante des messages et menus du terminal. Les règles et la présentation peuvent ainsi évoluer séparément."
+      ],
+      [
+        "Sauvegarder sans service externe.",
+        "Des fichiers JSON répondent à la contrainte hors ligne et permettent de recharger un tournoi. L’usage courant ne nécessite ni serveur ni base de données distante."
+      ],
+      [
+        "Tenir compte des rencontres précédentes.",
+        "Après la première ronde, les appariements prennent en compte les scores en cherchant à éviter les adversaires déjà rencontrés. Cette logique accompagne le déroulement du tournoi."
+      ]
+    ],
+    "result": {
+      "title": "Un parcours complet, avec des données que l’on retrouve.",
+      "copy": "Le programme couvre l’inscription, la création des rondes, la saisie des résultats et la consultation des rapports. La démonstration ci-dessous montre une sortie réelle de l’application avec huit joueurs fictifs. Il s’agit d’un projet de formation, sans déploiement revendiqué dans un club.",
+      "proofs": [
+        "Gestion des joueurs, des tournois, des rondes et des matchs.",
+        "Sauvegarde locale et rechargement de l’état du tournoi.",
+        "Cinq rapports pour consulter les informations."
+      ]
+    },
+    "enquiry": {
+      "title": "Des opérations à réunir dans un outil plus simple ?",
+      "copy": "Parlons de votre manière de travailler et des tâches qu’une application pourrait vous aider à organiser."
+    }
   },
   "optimizer": {
     "category": "04 / PYTHON & ALGORITHMES",
     "description": "Trouver la meilleure combinaison sous contrainte de budget, puis vérifier le résultat.",
-    "intention": "Un budget fixé. Une sélection optimisée.",
+    "intention": "Trouver une solution. Pouvoir expliquer le résultat.",
     "discipline": "Développement Python / Optimisation d’algorithmes",
     "context": "OpenClassrooms · Projet Python 7",
     "stack": ["Python", "NumPy", "Decimal", "CSV"],
-    "detail": "Comment choisir une combinaison d’actions sans dépasser 500 €, lorsqu’on ne peut acheter chaque action qu’une fois ? Ce projet compare une recherche exhaustive à une solution par programmation dynamique. Le travail porte sur le calcul, la qualité des données d’entrée et la reconstitution d’un résultat vérifiable.",
-    "features": [
-      [
-        "Comparer deux approches",
-        "La recherche exhaustive sert de référence sur le petit jeu de données. La programmation dynamique traite les fichiers plus volumineux à l’aide de tableaux NumPy."
-      ],
-      [
-        "Conserver la précision des montants",
-        "Les coûts sont exprimés en centimes entiers et les valeurs sources sont lues avec Decimal. La combinaison retenue peut être reconstituée à partir des décisions du programme."
-      ],
-      [
-        "Expliquer les données retenues",
-        "Les lignes invalides, les noms contradictoires et les doublons sont traités explicitement. Sur dataset1.csv, 954 actions sont acceptées et 47 lignes sont écartées."
-      ]
-    ],
+    "detail": "Cet exercice Python simule un besoin de sélection sous contrainte : choisir une combinaison d’actions avec un budget limité. Mon travail porte sur l’algorithme, la fiabilité des données et la restitution d’un résultat vérifiable. Les rendements sont ceux des jeux de données pédagogiques.",
     "imageAlt": "Graphique du meilleur gain théorique pour des budgets croissants, calculé à partir du premier jeu de données du projet.",
     "caption": "Budget et gain théorique — 26 points calculés par le programme sur dataset1.csv.",
     "terminalTitle": "Un résultat que l’on peut vérifier.",
     "terminalCaption": "Extrait d’exécution vérifié le 21 octobre 2026. Sur le petit jeu de données, les deux algorithmes obtiennent le même gain.",
-    "note": "Exercice d’algorithmique utilisant des jeux de données à rendements fixes. Ces résultats sont théoriques et ne représentent ni des gains financiers réalisés ni un produit de trading."
+    "note": "Exercice d’algorithmique utilisant des jeux de données à rendements fixes. Ces résultats sont théoriques et ne représentent ni des gains financiers réalisés ni un produit de trading.",
+    "challenge": {
+      "title": "Explorer les possibilités sans toutes les énumérer.",
+      "copy": "Une recherche exhaustive permet de vérifier un petit jeu de données, mais le nombre de combinaisons augmente rapidement. L’enjeu était de traiter des fichiers plus volumineux tout en respectant le budget et en conservant la liste exacte des actions retenues."
+    },
+    "objectives": [
+      "Maximiser le gain théorique sans dépasser 500 €.",
+      "Traiter les jeux de données plus volumineux avec une approche adaptée.",
+      "Restituer une sélection et des montants que l’on peut contrôler."
+    ],
+    "constraints": [
+      "Chaque action peut être achetée au plus une fois.",
+      "Les montants doivent rester précis au centime.",
+      "Les fichiers comportent des lignes invalides, des doublons et des noms ambigus."
+    ],
+    "approach": [
+      [
+        "Construire une référence de comparaison.",
+        "La recherche exhaustive essaie toutes les combinaisons du petit jeu de données. Elle fournit une référence pour contrôler le résultat de la solution optimisée."
+      ],
+      [
+        "Changer la manière de chercher.",
+        "J’ai utilisé la programmation dynamique pour résoudre des sous-problèmes par budget et conserver les décisions nécessaires à la reconstitution de la sélection."
+      ],
+      [
+        "Vérifier les entrées et la sortie.",
+        "Les montants sont normalisés, les lignes problématiques sont traitées explicitement et le résultat optimisé est comparé à la référence sur le petit jeu de données."
+      ]
+    ],
+    "decisions": [
+      [
+        "Des centimes entiers pour les coûts.",
+        "La lecture avec Decimal puis le calcul en centimes entiers évitent de dépendre des approximations des nombres à virgule pour respecter le budget."
+      ],
+      [
+        "Une sélection reconstituée, pas seulement un score.",
+        "Le programme conserve les décisions qui permettent de retrouver les actions choisies. Le montant annoncé peut ainsi être rapproché d’une liste concrète."
+      ],
+      [
+        "Des données rejetées de façon explicite.",
+        "Les lignes invalides, les doublons et les noms contradictoires ne sont pas simplement absorbés par le calcul. Un bilan distingue les données retenues de celles qui sont écartées."
+      ]
+    ],
+    "result": {
+      "title": "Une sélection chiffrée et contrôlable.",
+      "copy": "Sur le premier jeu de données, le programme retient 22 actions pour 499,96 €, avec un gain théorique de 198,55 €. Sur le petit jeu de données, la méthode optimisée et la recherche exhaustive donnent le même gain. Ces résultats décrivent l’exercice, pas une performance financière réelle.",
+      "proofs": [
+        "954 actions acceptées et 47 lignes écartées sur dataset1.csv.",
+        "22 actions retenues pour un coût total de 499,96 €.",
+        "Même gain entre les deux méthodes sur le petit jeu de données."
+      ]
+    },
+    "enquiry": {
+      "title": "Un besoin métier à traduire en outil fiable ?",
+      "copy": "Je peux vous aider à clarifier les contraintes, organiser les données et construire une solution dont les résultats restent compréhensibles."
+    }
   }
 }
